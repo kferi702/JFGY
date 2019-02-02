@@ -33,7 +33,7 @@ namespace Forma1.Repository
         /// Módosít meglévő versenyzőt
         /// </summary>
         /// <param name="name">Módosítandó versenyző</param>
-        /// <exception cref="Exception"></exception>
+        /// <exception cref="Exception">A módosítandó versenyzőt nem találjuk, nem lehet módosítani</exception>
         public void updateRacer(string name)
         {
 
