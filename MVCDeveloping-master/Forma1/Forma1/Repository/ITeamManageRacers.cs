@@ -8,8 +8,8 @@ namespace Forma1.Repository
 {
     interface ITeamManageRacers
     {
-        void deleteRacer(Racer r);
-        void updateRacer(Racer r);
+        void deleteRacer(string name, Racer newRacer);
+        void updateRacer(string name);
         void createRacer(Racer r);
     }
 }
