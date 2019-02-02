@@ -8,15 +8,22 @@ namespace Forma1.Repository
 {
     public class Racer
     {
+        private int id;
         private string name;
         private int age;
         private int salary;
 
-        public Racer(string name, int age, int salary)
+        public Racer(int id, string name, int age, int salary)
         {
+            this.id = id;
             this.name = name;
             this.age = age;
             this.salary = salary;
+        }
+
+        public int getID(int id)
+        {
+            return id;
         }
 
         public void setName(string name)
@@ -51,7 +58,7 @@ namespace Forma1.Repository
 
         public override string ToString()
         {
-            return $"{name} {age} éves és fizetése {salary}";
+            return $"{id}) {name} {age} éves és fizetése {salary}";
         }
     }
 }
