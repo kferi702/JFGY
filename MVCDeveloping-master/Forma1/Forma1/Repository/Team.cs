@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Forma1.Repository
 {
-    public class Team
+    public class Team : ITeam
     {
         private string name;
         private List<Racer> racers;
@@ -30,6 +30,21 @@ namespace Forma1.Repository
         public override string ToString()
         {
             return $"{name}";
+        }
+
+        public void Update(string newName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int getTeamSalary()
+        {
+            throw new NotImplementedException();
         }
     }
 }
