@@ -15,7 +15,7 @@ namespace Forma1.Repository
         /// <exception cref="Exception">Két ugyanolyan versenyző nem adható a listához</exception>
         public void createRacer(Racer r)
         {
-
+            throw new Exception();
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace Forma1.Repository
         /// <param name="newRacer"></param>
         public void deleteRacer(string name, Racer newRacer)
         {
-
+            throw new Exception();
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace Forma1.Repository
         /// <exception cref="Exception">A módosítandó versenyzőt nem találjuk, nem lehet módosítani</exception>
         public void updateRacer(string name)
         {
-
+            throw new Exception();
         }
     }
 }
