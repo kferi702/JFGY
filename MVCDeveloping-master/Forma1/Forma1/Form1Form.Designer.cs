@@ -42,14 +42,14 @@
             this.labelRecer = new System.Windows.Forms.Label();
             this.listBoxRacer = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxRacerSalary = new System.Windows.Forms.TextBox();
+            this.textBoxRacerAge = new System.Windows.Forms.TextBox();
+            this.textBoxRacerName = new System.Windows.Forms.TextBox();
             this.labelSalary = new System.Windows.Forms.Label();
             this.labelRacerAge = new System.Windows.Forms.Label();
             this.labelRacerName = new System.Windows.Forms.Label();
             this.comboBoxTeamMove = new System.Windows.Forms.ComboBox();
             this.labelMoveRacer = new System.Windows.Forms.Label();
-            this.textBoxRacerName = new System.Windows.Forms.TextBox();
-            this.textBoxRacerAge = new System.Windows.Forms.TextBox();
-            this.textBoxRacerSalary = new System.Windows.Forms.TextBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonComputeTeamSalary = new System.Windows.Forms.Button();
             this.textBoxTeamSalary = new System.Windows.Forms.TextBox();
@@ -187,6 +187,27 @@
             this.panel1.Size = new System.Drawing.Size(349, 240);
             this.panel1.TabIndex = 23;
             // 
+            // textBoxRacerSalary
+            // 
+            this.textBoxRacerSalary.Location = new System.Drawing.Point(86, 96);
+            this.textBoxRacerSalary.Name = "textBoxRacerSalary";
+            this.textBoxRacerSalary.Size = new System.Drawing.Size(235, 20);
+            this.textBoxRacerSalary.TabIndex = 28;
+            // 
+            // textBoxRacerAge
+            // 
+            this.textBoxRacerAge.Location = new System.Drawing.Point(86, 52);
+            this.textBoxRacerAge.Name = "textBoxRacerAge";
+            this.textBoxRacerAge.Size = new System.Drawing.Size(235, 20);
+            this.textBoxRacerAge.TabIndex = 27;
+            // 
+            // textBoxRacerName
+            // 
+            this.textBoxRacerName.Location = new System.Drawing.Point(51, 16);
+            this.textBoxRacerName.Name = "textBoxRacerName";
+            this.textBoxRacerName.Size = new System.Drawing.Size(270, 20);
+            this.textBoxRacerName.TabIndex = 26;
+            // 
             // labelSalary
             // 
             this.labelSalary.AutoSize = true;
@@ -230,27 +251,6 @@
             this.labelMoveRacer.Size = new System.Drawing.Size(81, 13);
             this.labelMoveRacer.TabIndex = 25;
             this.labelMoveRacer.Text = "csapatba átrak.";
-            // 
-            // textBoxRacerName
-            // 
-            this.textBoxRacerName.Location = new System.Drawing.Point(51, 16);
-            this.textBoxRacerName.Name = "textBoxRacerName";
-            this.textBoxRacerName.Size = new System.Drawing.Size(270, 20);
-            this.textBoxRacerName.TabIndex = 26;
-            // 
-            // textBoxRacerAge
-            // 
-            this.textBoxRacerAge.Location = new System.Drawing.Point(86, 52);
-            this.textBoxRacerAge.Name = "textBoxRacerAge";
-            this.textBoxRacerAge.Size = new System.Drawing.Size(235, 20);
-            this.textBoxRacerAge.TabIndex = 27;
-            // 
-            // textBoxRacerSalary
-            // 
-            this.textBoxRacerSalary.Location = new System.Drawing.Point(86, 96);
-            this.textBoxRacerSalary.Name = "textBoxRacerSalary";
-            this.textBoxRacerSalary.Size = new System.Drawing.Size(235, 20);
-            this.textBoxRacerSalary.TabIndex = 28;
             // 
             // buttonExit
             // 
@@ -319,6 +319,7 @@
             this.Controls.Add(this.labelTeam);
             this.Controls.Add(this.listBoxTeam);
             this.Name = "Form1Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Forma 1.";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
