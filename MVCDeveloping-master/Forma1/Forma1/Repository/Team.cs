@@ -17,21 +17,6 @@ namespace Forma1.Repository
             racers = new List<Racer>();
         }
 
-        public void setName(string name)
-        {
-            this.name = name;
-        }
-
-        public List<Racer> getRacers()
-        {
-            return racers;
-        }
-
-        public override string ToString()
-        {
-            return $"{name}";
-        }
-
         /// <summary>
         /// Módosítja a csapat nevét
         /// </summary>
@@ -47,7 +32,7 @@ namespace Forma1.Repository
         /// </summary>
         public void delete()
         {
-            throw new NotImplementedException();
+            racers.Clear();
         }
 
         /// <summary>
