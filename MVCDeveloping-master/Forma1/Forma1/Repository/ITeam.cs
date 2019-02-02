@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Forma1.Repository
 {
-    public interface ITeam
+    interface ITeam
     {
         void update(string newName);
         void delete();

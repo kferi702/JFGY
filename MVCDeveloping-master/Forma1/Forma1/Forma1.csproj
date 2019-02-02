@@ -54,6 +54,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ITeam.cs" />
+    <Compile Include="Repository\ITeamManageRacers.cs" />
     <Compile Include="Repository\Racer.cs" />
     <Compile Include="Repository\Team.cs" />
     <EmbeddedResource Include="Form1Form.resx">
