@@ -32,19 +32,47 @@ namespace Forma1.Repository
             return $"{name}";
         }
 
-        public void Update(string newName)
+        /// <summary>
+        /// Módosítja a csapat nevét
+        /// </summary>
+        /// <param name="newName">Új csapat neve</param>
+        public void update(string newName)
+        {
+            this.name = newName;
+        }
+
+        /// <summary>
+        /// Törlés funkció
+        /// A listából minden versenyzőt törlünk
+        /// </summary>
+        public void delete()
         {
             throw new NotImplementedException();
         }
 
-        public void Delete()
-        {
-            throw new NotImplementedException();
-        }
-
+        /// <summary>
+        /// A csapat versenyzőinek összbére
+        /// </summary>
+        /// <returns></returns>
         public int getTeamSalary()
         {
-            throw new NotImplementedException();
+            // Foreach
+
+            int sum = 0;
+            foreach (Racer r in racers)
+            {
+                sum += r.getSalary();
+            }
+            return sum;
+
+            // Lambda-kifejezés
+            //return racers.Sum(x => x.getSalary());
+
+            // LINQ
+            //var result = from racer in racers
+            //             select racer.getSalary();
+
+            //return result.Sum();
         }
     }
 }

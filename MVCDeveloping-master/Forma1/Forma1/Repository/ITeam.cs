@@ -8,8 +8,8 @@ namespace Forma1.Repository
 {
     public interface ITeam
     {
-        void Update(string newName);
-        void Delete();
+        void update(string newName);
+        void delete();
 
         int getTeamSalary();
     }
