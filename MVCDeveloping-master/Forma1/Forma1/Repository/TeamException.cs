@@ -9,8 +9,6 @@ namespace Forma1.Repository
     public class TeamException : Exception
     {
         public TeamException(string message) : base(message)
-        {
-
-        }
+        { }
     }
 }

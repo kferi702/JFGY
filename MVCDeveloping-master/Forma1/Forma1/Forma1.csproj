@@ -57,6 +57,7 @@
     <Compile Include="Repository\ITeamManageRacers.cs" />
     <Compile Include="Repository\Racer.cs" />
     <Compile Include="Repository\Team.cs" />
+    <Compile Include="Repository\TeamException.cs" />
     <Compile Include="Repository\TeamManageRacers.cs" />
     <EmbeddedResource Include="Form1Form.resx">
       <DependentUpon>Form1Form.cs</DependentUpon>
