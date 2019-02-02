@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Forma1.Repository
 {
-    interface ITeamManageRacers
+    public interface ITeamManageRacers
     {
         void deleteRacer(string name, Racer newRacer);
         void updateRacer(string name);

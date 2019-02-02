@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Forma1.Repository
 {
-    public class Team : ITeam
+    public partial class Team : ITeam
     {
         private string name;
         private List<Racer> racers;
