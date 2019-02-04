@@ -53,6 +53,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\F1.cs" />
     <Compile Include="Repository\ITeam.cs" />
     <Compile Include="Repository\ITeamManageRacers.cs" />
     <Compile Include="Model\Racer.cs" />
