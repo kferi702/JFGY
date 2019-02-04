@@ -13,7 +13,7 @@ namespace Forma1
 {
     public partial class Form1Form : Form
     {
-        Forma1Controller controller;
+        private Forma1Controller controller;
 
         public Form1Form()
         {
