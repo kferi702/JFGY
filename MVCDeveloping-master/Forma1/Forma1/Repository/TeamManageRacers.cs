@@ -67,7 +67,7 @@ namespace Forma1.Repository
                 }
                 index++;
             }
-            throw new TeamException("A módosítandó versenyzőt nem találjuk, nem lehet módosítani");
+            throw new TeamException($"{name} -t nem találjuk, nem lehet módosítani");
         }
     }
 }
