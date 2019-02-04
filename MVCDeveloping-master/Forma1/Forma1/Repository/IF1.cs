@@ -9,7 +9,7 @@ namespace Forma1.Repository
 {
     public interface IF1
     {
-        void add(Team team);
+        void add(Team t);
         void update(string name, string newName);
         void delete(string name);
 

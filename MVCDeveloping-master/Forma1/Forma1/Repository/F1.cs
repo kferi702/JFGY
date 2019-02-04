@@ -16,14 +16,22 @@ namespace Forma1.Repository
             teams = new List<Team>();
         }
 
-        public void add(Team team)
+        public void add(Team t)
         {
-            throw new NotImplementedException();
+            teams.Add(t);
         }
 
         public void delete(string name)
         {
-            throw new NotImplementedException();
+            int index = 0;
+            foreach (Team t in teams)
+            {
+                if (t.getName() == name)
+                {
+                    teams.RemoveAt(index);
+                }
+                index++;
+            }
         }
 
         public int getF1Salary()

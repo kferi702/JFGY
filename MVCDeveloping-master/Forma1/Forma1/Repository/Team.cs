@@ -18,6 +18,11 @@ namespace Forma1.Repository
             racers = new List<Racer>();
         }
 
+        public string getName()
+        {
+            return name;
+        }
+
         /// <summary>
         /// Módosítja a csapat nevét
         /// </summary>
