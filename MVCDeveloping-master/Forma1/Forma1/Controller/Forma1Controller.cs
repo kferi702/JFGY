@@ -20,5 +20,10 @@ namespace Forma1.Controller
         {
             service.provideTestData();
         }
+
+        public List<string> getTeamNamesList()
+        {
+            return service.getTeamNamesList();
+        }
     }
 }

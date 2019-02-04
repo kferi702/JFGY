@@ -23,7 +23,7 @@ namespace Forma1
 
         private void buttonInitializeData_Click(object sender, EventArgs e)
         {
-            controller.initializeTestData();
+            listBoxTeam.DataSource = controller.getTeamNamesList();
         }
     }
 }

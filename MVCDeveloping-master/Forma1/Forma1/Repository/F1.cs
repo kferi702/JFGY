@@ -59,5 +59,17 @@ namespace Forma1.Repository
             }
             return sum;
         }
+
+        public List<string> getTeamNamesList()
+        {
+            List<string> names = new List<string>();
+
+            foreach (Team t in teams)
+            {
+                names.Add(t.getName());
+            }
+
+            return names;
+        }
     }
 }

@@ -23,5 +23,10 @@ namespace Forma1.Service
             testData = new TestData();
             f1Repository = testData.getTestData();
         }
+
+        public List<string> getTeamNamesList()
+        {
+            return f1Repository.getTeamNamesList();
+        }
     }
 }
