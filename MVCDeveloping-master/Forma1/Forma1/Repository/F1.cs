@@ -34,12 +34,18 @@ namespace Forma1.Repository
             }
         }
 
-        public int getF1Salary()
+        public void update(string name, string newName)
         {
-            throw new NotImplementedException();
+            foreach (Team t in teams)
+            {
+                if (t.getName() == name)
+                {
+                    t.update(newName);
+                }
+            }
         }
 
-        public void update(string name, string newName)
+        public int getF1Salary()
         {
             throw new NotImplementedException();
         }
