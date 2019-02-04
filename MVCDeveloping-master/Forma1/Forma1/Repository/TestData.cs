@@ -8,9 +8,15 @@ namespace Forma1.Repository
 {
     public class TestData
     {
-        internal F1 getTestData()
+        private F1 f1;
+
+        public F1 getTestData()
         {
-            throw new NotImplementedException();
+            f1 = new F1();
+
+
+
+            return f1;
         }
     }
 }

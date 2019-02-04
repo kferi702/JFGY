@@ -10,12 +10,12 @@ namespace Forma1.Service
     public class TeamService
     {
         private TestData testData;
-        private F1 f1;
+        private F1 f1Repository;
 
         public void provideTestData()
         {
             testData = new TestData();
-            f1 = testData.getTestData();
+            f1Repository = testData.getTestData();
 
         }
     }

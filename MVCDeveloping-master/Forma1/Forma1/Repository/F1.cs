@@ -9,6 +9,7 @@ namespace Forma1.Repository
     public class F1
     {
         private List<Team> teams;
+        private Team team;
 
         public F1()
         {
