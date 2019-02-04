@@ -12,6 +12,12 @@ namespace Forma1.Service
         private TestData testData;
         private F1 f1Repository;
 
+        public TeamService()
+        {
+            testData = new TestData();
+            f1Repository = new F1();
+        }
+
         public void provideTestData()
         {
             testData = new TestData();
