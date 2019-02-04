@@ -30,10 +30,11 @@ namespace Forma1.Repository
                 if (t.getName() == name)
                 {
                     teams.RemoveAt(index);
+                    return;
                 }
                 index++;
             }
-            throw new F1Exception("");
+            throw new F1Exception($"{name} nevű csapat nem létezik, nem lehet törölni!");
         }
 
         public void update(string name, string newName)
