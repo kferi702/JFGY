@@ -39,14 +39,14 @@ namespace Forma1.Repository
             }
             throw new TeamException($"{name} a csapatnak nem tagja, nem lehet törölni!");
 
-            /*if (racers.Exists(x => x.getName() == name))
-            {
-                racers.RemoveAll(x => x.getName() == name);
-            }
-            else
-            {
-                throw new TeamException($"{ name } a csapatnak nem tagja, nem lehet törölni!");
-            }*/
+            //if (racers.Exists(x => x.getName() == name))
+            //{
+            //    racers.RemoveAll(x => x.getName() == name);
+            //}
+            //else
+            //{
+            //    throw new TeamException($"{ name } a csapatnak nem tagja, nem lehet törölni!");
+            //}
         }
 
         /// <summary>
