@@ -63,10 +63,10 @@ namespace Forma1.Model
 
         public void update(Racer r)
         {
-            this.id = r.getID();
-            this.name = r.getName();
-            this.age = r.getAge();
-            this.salary = r.getSalary();
+            id = r.getID();
+            name = r.getName();
+            age = r.getAge();
+            salary = r.getSalary();
         }
     }
 }

@@ -65,9 +65,9 @@ namespace Forma1.Repository
                     //r.setName(newRacer.getName());
                     r.update(newRacer);
                 }
-
                 index++;
             }
+            throw new TeamException("A módosítandó versenyzőt nem találjuk, nem lehet módosítani");
         }
     }
 }
