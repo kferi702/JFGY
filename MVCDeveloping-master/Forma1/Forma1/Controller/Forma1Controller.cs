@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Forma1.Controller
 {
-    class Forma1Controller
+    public class Forma1Controller
     {
+
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Forma1.Service
 {
-    class TeamService
+    public class TeamService
     {
+
     }
 }
