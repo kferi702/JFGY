@@ -13,7 +13,7 @@ namespace Forma1.Repository
         /// </summary>
         /// <param name="r">Új versenyző</param>
         /// <exception cref="Exception">Két ugyanolyan versenyző nem adható a listához</exception>
-        public void createRacer(Racer r)
+        public void add(Racer r)
         {
             racers.Add(r);
         }
@@ -23,10 +23,18 @@ namespace Forma1.Repository
         /// </summary>
         /// <param name="name">Törlendő versenyző neve</param>
         /// <exception cref="Exception">A versenyző a csapatnak nem része, nem lehet törölni</exception>
-        /// <param name="newRacer"></param>
-        public void deleteRacer(string name, Racer newRacer)
+        public void delete(string name)
         {
-            throw new Exception();
+            int index = 0;
+            foreach (Racer r in racers)
+            {
+                if (r.getName() == name)
+                {
+                    racers.RemoveAt(index);
+                    return;
+                }
+                index++;
+            }
         }
 
         /// <summary>
@@ -34,7 +42,7 @@ namespace Forma1.Repository
         /// </summary>
         /// <param name="name">Módosítandó versenyző</param>
         /// <exception cref="Exception">A módosítandó versenyzőt nem találjuk, nem lehet módosítani</exception>
-        public void updateRacer(string name)
+        public void update(string name)
         {
             throw new Exception();
         }
