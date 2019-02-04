@@ -47,6 +47,7 @@ namespace Forma1.Repository
                     return;
                 }
             }
+            throw new F1Exception($"{name} nevű csapat nem létezik, nem lehet módosítani!");
         }
 
         public int getF1Salary()
