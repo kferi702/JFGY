@@ -44,6 +44,7 @@ namespace Forma1.Repository
                 if (t.getName() == name)
                 {
                     t.update(newName);
+                    return;
                 }
             }
         }
