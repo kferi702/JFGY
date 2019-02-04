@@ -1,10 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Forma1.Form1Form">
-    <Position X="1" Y="0.5" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Forma1.Form1Form" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="4" />
     <TypeIdentifier>
       <HashCode>BACBAAAAQCCCAgECoAiUCAACBEAwAAAiFABAAQAMAAA=</HashCode>
       <FileName>Form1Form.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="controller" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Forma1.Controller.Forma1Controller" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Controller\Forma1Controller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="service" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Forma1.Service.TeamService">
+    <Position X="2.5" Y="2.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAQAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Service\TeamService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="testData" />
+      <Field Name="f1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Forma1.Repository.TestData" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Repository\TestData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Forma1.Repository.F1" Collapsed="true">
+    <Position X="2.5" Y="4.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\F1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="teams" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Forma1.Repository.Team" Collapsed="true">
+    <Position X="8.5" Y="4.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAQAAAAAEAAAAAAAAgAAGAAA=</HashCode>
+      <FileName>Repository\Team.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="racers" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Forma1.Model.Racer" Collapsed="true">
+    <Position X="8.5" Y="6.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAgQAKkAAAAAAAAAAAEAABEAAAEAAAEAgA=</HashCode>
+      <FileName>Model\Racer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
