@@ -66,6 +66,7 @@
             this.buttonInitializeData.TabIndex = 15;
             this.buttonInitializeData.Text = "Teszt adatok betöltése";
             this.buttonInitializeData.UseVisualStyleBackColor = true;
+            this.buttonInitializeData.Click += new System.EventHandler(this.buttonInitializeData_Click);
             // 
             // buttonDeleteTeam
             // 

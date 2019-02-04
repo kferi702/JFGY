@@ -8,6 +8,9 @@ namespace Forma1.Controller
 {
     public class Forma1Controller
     {
+        public void initializeTestData()
+        {
 
+        }
     }
 }

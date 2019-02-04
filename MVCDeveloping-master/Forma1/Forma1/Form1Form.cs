@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Forma1.Controller;
 
 namespace Forma1
 {
     public partial class Form1Form : Form
     {
+        Forma1Controller controller;
+
         public Form1Form()
         {
             InitializeComponent();
+            controller = new Forma1Controller();
+        }
+
+        private void buttonInitializeData_Click(object sender, EventArgs e)
+        {
+            controller.initializeTestData();
         }
     }
 }
