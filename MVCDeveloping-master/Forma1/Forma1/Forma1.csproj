@@ -61,6 +61,7 @@
     <Compile Include="MyExceptions\TeamException.cs" />
     <Compile Include="Repository\TeamManageRacers.cs" />
     <Compile Include="Repository\TestData.cs" />
+    <Compile Include="Service\TeamService.cs" />
     <EmbeddedResource Include="Form1Form.resx">
       <DependentUpon>Form1Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,7 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="Service\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
