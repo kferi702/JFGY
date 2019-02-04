@@ -52,6 +52,7 @@
     <Compile Include="Form1Form.Designer.cs">
       <DependentUpon>Form1Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyExceptions\F1Exception.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\F1.cs" />
@@ -85,7 +86,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SystemDesign\Layout.cd" />
+    <None Include="SystemDesign\Layers.cd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

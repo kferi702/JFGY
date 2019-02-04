@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Forma1.MyExceptions;
 
 namespace Forma1.Repository
 {
@@ -32,6 +33,7 @@ namespace Forma1.Repository
                 }
                 index++;
             }
+            throw new F1Exception("");
         }
 
         public void update(string name, string newName)
@@ -47,7 +49,12 @@ namespace Forma1.Repository
 
         public int getF1Salary()
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            foreach (Team t in teams)
+            {
+                sum += t.getTeamSalary();
+            }
+            return sum;
         }
     }
 }
