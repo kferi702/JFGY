@@ -52,9 +52,18 @@ namespace Forma1.Repository
         /// </summary>
         /// <param name="name">Módosítandó versenyző</param>
         /// <exception cref="Exception">A módosítandó versenyzőt nem találjuk, nem lehet módosítani</exception>
-        public void update(string name)
+        public void update(string name, Racer newRacer)
         {
+            int index = 0;
+            foreach (Racer r in racers)
+            {
+                if (r.getName() == name)
+                {
+                    r.setName(newRacer.getName());
+                }
 
+                index++;
+            }
         }
     }
 }
