@@ -15,7 +15,7 @@ namespace Forma1.Repository
         /// <exception cref="Exception">Két ugyanolyan versenyző nem adható a listához</exception>
         public void createRacer(Racer r)
         {
-            throw new Exception();
+            racers.Add(r);
         }
 
         /// <summary>
