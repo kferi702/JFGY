@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Forma1.Repository
+namespace Forma1.Model
 {
     public class Racer
     {
@@ -21,7 +21,7 @@ namespace Forma1.Repository
             this.salary = salary;
         }
 
-        public int getID(int id)
+        public int getID()
         {
             return id;
         }
@@ -59,6 +59,14 @@ namespace Forma1.Repository
         public override string ToString()
         {
             return $"{id}) {name} {age} éves és fizetése {salary}";
+        }
+
+        public void update(Racer r)
+        {
+            this.id = r.getID();
+            this.name = r.getName();
+            this.age = r.getAge();
+            this.salary = r.getSalary();
         }
     }
 }

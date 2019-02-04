@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Forma1.MyException;
+using Forma1.Model;
 
 namespace Forma1.Repository
 {
@@ -60,7 +61,9 @@ namespace Forma1.Repository
             {
                 if (r.getName() == name)
                 {
-                    r.setName(newRacer.getName());
+                    //racers.ElementAt(index).setName(newRacer.getName());
+                    //r.setName(newRacer.getName());
+                    r.update(newRacer);
                 }
 
                 index++;
