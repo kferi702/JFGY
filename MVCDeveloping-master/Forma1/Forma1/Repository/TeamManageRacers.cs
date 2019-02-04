@@ -25,7 +25,7 @@ namespace Forma1.Repository
         /// <exception cref="Exception">A versenyző a csapatnak nem része, nem lehet törölni</exception>
         public void delete(string name)
         {
-            int index = 0;
+            /*int index = 0;
             foreach (Racer r in racers)
             {
                 if (r.getName() == name)
@@ -35,6 +35,9 @@ namespace Forma1.Repository
                 }
                 index++;
             }
+            throw new TeamException($"{name} a csapatnak nem része, nem lehet törölni!");*/
+
+            racers.RemoveAll(x => x.getName() == name);
         }
 
         /// <summary>
