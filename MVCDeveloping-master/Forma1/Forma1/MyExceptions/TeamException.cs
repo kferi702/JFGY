@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Forma1.Repository
+namespace Forma1.MyException
 {
     public class TeamException : Exception
     {
