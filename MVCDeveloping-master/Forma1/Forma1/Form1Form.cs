@@ -28,8 +28,11 @@ namespace Forma1
 
         private void listBoxTeam_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string teamName = listBoxTeam.SelectedItem.ToString();
-            listBoxRacer.DataSource = controller.getTeamRacersName(teamName);
+            if (listBoxTeam.SelectedIndex > 0)
+            {
+                string teamName = listBoxTeam.SelectedItem.ToString();
+                listBoxRacer.DataSource = controller.getTeamRacersName(teamName);
+            }
         }
 
         private void buttonAddTeam_Click(object sender, EventArgs e)
@@ -39,6 +42,8 @@ namespace Forma1
             try
             {
                 controller.addTeamToF1(teamName);
+                listBoxTeam.DataSource = null;
+                listBoxTeam.DataSource = controller.getTeamNamesList();
             }
             catch (ControllerException controlEx)
             {
