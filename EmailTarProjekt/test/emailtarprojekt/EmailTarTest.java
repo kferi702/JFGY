@@ -61,7 +61,7 @@ public class EmailTarTest {
     public void testEllenorzesNagybetuKukacElott() {
         System.out.println("testEllenorzesNagybetuKukacElott");
         try {
-            EmailTar instance = new EmailTar("Peti@vasvari.hu");
+            EmailTar instance = new EmailTar("peTi@vasvari.hu");
             instance.ellenorzes();
             fail("Az ellenőrzés kukac előtt nagybetű esetén nem dob kivételt!");
         } catch (Exception e) {
@@ -75,7 +75,7 @@ public class EmailTarTest {
     public void testEllenorzesNagybetuEsTobbPontKukacElott() {
         System.out.println("testEllenorzesNagybetuKisbetuEsTobbPontKukacElott");
         try {
-            EmailTar instance = new EmailTar("Peti.p.p@vasvari.hu");
+            EmailTar instance = new EmailTar("peti.p.p@vaSvari.hu");
             instance.ellenorzes();
             fail("Az ellenőrzés kukac előtt több pont esetén nem dob kivételt!");
         } catch (Exception e) {

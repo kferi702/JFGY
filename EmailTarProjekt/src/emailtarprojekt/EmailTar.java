@@ -68,13 +68,6 @@ public class EmailTar {
      * vissza a függvény
      */
     private boolean ellenorzesKukacElottTobbPont() {
-        for (char c : email.toCharArray()) {
-            while (c != '@') {
-                if (Character.isUpperCase(c) && c != '.') {
-                    return true;
-                }
-            }
-        }
         return false;
     }
 
@@ -86,13 +79,18 @@ public class EmailTar {
      * vissza a függvény
      */
     private boolean ellenorzesNagybetuKukacElott() {
-        for (char c : email.toCharArray()) {
-            while (c != '@') {
-                if (Character.isUpperCase(c)) {
-                    return true;
-                }
+
+        String[] kukac = email.split("@");
+
+        String kukacElott = kukac[0];
+
+        for (char c : kukacElott.toCharArray()) {
+
+            if (Character.isUpperCase(c)) {
+                return true;
             }
         }
         return false;
     }
+
 }
