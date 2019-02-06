@@ -69,10 +69,15 @@ public class EmailTar {
      */
     private boolean ellenorzesKukacElottTobbPont() {
 
-        //Több pont
-        return true;
+        String[] kukac = email.split("@");
+        String kukacElott = kukac[0];
 
-        //Egy pont return false;
+        for (char c : kukacElott.toCharArray()) {
+            if (String.valueOf(c).contains(".")) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
