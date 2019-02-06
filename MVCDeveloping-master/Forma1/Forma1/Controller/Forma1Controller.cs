@@ -47,9 +47,9 @@ namespace Forma1.Controller
                 NameValidator nameValidator = new NameValidator(teamName);
                 nameValidator.validation();
             }
-            catch (Exception e)
+            catch (NameNotValidException e)
             {
-
+                throw new ControllerException($"{teamName} nem megfelelő!");
             }
         }
     }

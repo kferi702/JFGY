@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Forma1.MyExceptions;
 
 namespace Forma1.Validation
 {
@@ -19,12 +16,12 @@ namespace Forma1.Validation
         {
             if (isEmpty())
             {
-                throw new Exception("A név nem lehet üres!");
+                throw new NameNotValidException("A név nem lehet üres!");
             }
 
             if (isFirstLetterNotUppercase())
             {
-                throw new Exception("A név nagy kezdőbetűvel kell kezdődjön!");
+                throw new NameNotValidException("A név nagy kezdőbetűvel kell kezdődjön!");
             }
         }
 
