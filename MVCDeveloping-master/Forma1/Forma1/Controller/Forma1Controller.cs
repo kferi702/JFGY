@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Forma1.Service;
 using System;
+using Forma1.Validation;
 
 namespace Forma1.Controller
 {
@@ -41,7 +42,15 @@ namespace Forma1.Controller
                 throw new ControllerException($"{teamName} csapat már létezik!");
             }
 
+            try
+            {
+                NameValidator nameValidator = new NameValidator(teamName);
+                nameValidator.validation();
+            }
+            catch (Exception e)
+            {
 
+            }
         }
     }
 }
