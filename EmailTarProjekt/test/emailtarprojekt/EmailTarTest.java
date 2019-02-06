@@ -38,7 +38,7 @@ public class EmailTarTest {
             fail("EmailTar konstruktor üres email címre nem dob kivételt!");
         } catch (Exception e) {
             if (e.getMessage() != "EmailTar objektum üres email címmel nem jöhet létre!") {
-                fail("Email konstruktor üres emailcímre rossz szüvergű kivételt dob!");
+                fail("Rossz szövegű kivételt dob!");
             }
         }
     }
@@ -52,7 +52,7 @@ public class EmailTarTest {
             fail("Az ellenőrzés kukac nélküli e-mail címre az ellenőrzés nem dob kivételt!");
         } catch (Exception e) {
             if (e.getMessage() != "Az email cím nem tartalmaz kukacot!") {
-                fail("Kukac nélküli email cím esetén az ellenőrzés rossz szövegű kivételt dob!");
+                fail("Rossz szövegű kivételt dob!");
             }
         }
     }
@@ -66,7 +66,7 @@ public class EmailTarTest {
             fail("Az ellenőrzés kukac előtt nagybetű esetén nem dob kivételt!");
         } catch (Exception e) {
             if (e.getMessage() != "Az email cím kukac előtt nagybetűt tartalmaz!") {
-                fail("Kukac előtt nagybetű és az ellenőrzés rossz szövegű kivételt dob!");
+                fail("Rossz szövegű kivételt dob!");
             }
         }
     }
@@ -80,7 +80,7 @@ public class EmailTarTest {
             fail("Az ellenőrzés kukac előtt több pont esetén nem dob kivételt!");
         } catch (Exception e) {
             if (e.getMessage() != "Az email cím kukac előtt több pontot tartalmaz!") {
-                fail("Kukac előtt több pont és az ellenőrzés rossz szövegű kivételt dob!");
+                fail("Rossz szövegű kivételt dob!");
             }
         }
     }
