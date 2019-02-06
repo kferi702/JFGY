@@ -33,17 +33,17 @@ namespace Forma1
 
         private void buttonAddTeam_Click(object sender, EventArgs e)
         {
-
+            controller.addTeamToF1();
         }
 
         private void buttonUpdateTeam_Click(object sender, EventArgs e)
         {
-
+            controller.updateTeamInF1();
         }
 
         private void buttonDeleteTeam_Click(object sender, EventArgs e)
         {
-
+            controller.deleteTeamFromF1();
         }
     }
 }
