@@ -14,8 +14,15 @@ namespace Forma1.Validation.Tests
         [TestMethod()]
         public void validationTestNameIsEmpty()
         {
-            NameValidator nameValidator = new NameValidator("");
-            nameValidator.validation();
+            NameValidator nv = new NameValidator("");
+            try
+            {
+                nv.validation();
+                Assert.Fail("Üres névre nem dob kivételt!");
+            }
+            catch (Exception e)
+            {
+            }
         }
     }
 }
