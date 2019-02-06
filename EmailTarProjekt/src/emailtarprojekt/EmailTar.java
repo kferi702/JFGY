@@ -78,7 +78,7 @@ public class EmailTar {
      * Ellenőrző függvény, amely ellenrőzi a kukac előtt van-e nagybetűs
      * karakter
      *
-     * @return Ha van logikai hamissal, ellenkező esetben logikai igazzal tér
+     * @return Ha van logikai igazzal, ellenkező esetben logikai hamissal tér
      * vissza a függvény
      */
     private boolean ellenorzesNagybetuKukacElott() {
