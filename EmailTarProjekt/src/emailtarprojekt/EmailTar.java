@@ -7,5 +7,7 @@ public class EmailTar {
     public EmailTar(String email) {
         this.email = email;
     }
+    
+    
 
 }

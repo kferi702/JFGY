@@ -29,8 +29,16 @@ public class EmailTarTest {
     }
 
     @Test
-    public void testSomeMethod() {
-        fail("The test case is a prototype.");
+    public void EmailTarKonstruktorUresEmailcim() {
+        System.out.println("EmailTarKonstruktorUresEmailcim.");
+        try {
+            EmailTar et = new EmailTar("");
+            fail("EmailTar konstruktor üres email címre nem dob kivételt!");
+        } catch (Exception e) {
+            if (e.getMessage() != "EmailTar objektum üres email címmel nem jöhet létre!") {
+                fail("Email konstruktor üres emailcímre rossz szüvergű kivételt dob!");
+            }
+        }
     }
 
 }
