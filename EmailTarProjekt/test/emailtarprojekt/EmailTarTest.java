@@ -72,8 +72,8 @@ public class EmailTarTest {
     }
 
     @Test
-    public void testEllenorzesNagybetuKisbetuEsTobbPiontKukacElott() {
-        System.out.println("testEllenorzesNagybetuKisbetuEsTobbPiontKukacElott");
+    public void testEllenorzesNagybetuKisbetuEsTobbPontKukacElott() {
+        System.out.println("testEllenorzesNagybetuKisbetuEsTobbPontKukacElott");
         try {
             EmailTar instance = new EmailTar("Peti.p.p@vasvari.hu");
             instance.ellenorzes();

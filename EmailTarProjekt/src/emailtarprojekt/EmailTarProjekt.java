@@ -13,7 +13,7 @@ public class EmailTarProjekt {
             EmailTar et = new EmailTar(email);
             et.ellenorzes();
         } catch (Exception e) {
-            System.out.println("Diák rossz e-mail cím miatt nem hozható létre!" + e.getMessage());
+            System.out.println("Diák rossz e-mail cím miatt nem hozható létre! " + e.getMessage());
         }
     }
 }
