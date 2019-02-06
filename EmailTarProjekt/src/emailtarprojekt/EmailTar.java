@@ -38,6 +38,10 @@ public class EmailTar {
         if (ellenorzesNagybetuKukacElott()) {
             throw new Exception("Az email cím kukac előtt nagybetűt tartalmaz!");
         }
+
+        if (ellenorzesKukacElottTobbPont()) {
+            throw new Exception("");
+        }
     }
 
     /**
