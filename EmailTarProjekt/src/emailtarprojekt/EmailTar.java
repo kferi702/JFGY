@@ -68,7 +68,11 @@ public class EmailTar {
      * vissza a függvény
      */
     private boolean ellenorzesKukacElottTobbPont() {
-        return false;
+
+        //Több pont
+        return true;
+
+        //Egy pont return false;
     }
 
     /**
