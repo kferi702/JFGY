@@ -85,16 +85,13 @@ public class EmailTar {
     private boolean ellenorzesNagybetuKukacElott() {
 
         String[] kukac = email.split("@");
-
         String kukacElott = kukac[0];
 
         for (char c : kukacElott.toCharArray()) {
-
             if (Character.isUpperCase(c)) {
                 return true;
             }
         }
         return false;
     }
-
 }
