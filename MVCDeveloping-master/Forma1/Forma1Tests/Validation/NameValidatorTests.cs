@@ -38,5 +38,18 @@ namespace Forma1.Validation.Tests
             {
             }
         }
+
+        [TestMethod()]
+        public void validationTestNameValid()
+        {
+            NameValidator nv = new NameValidator("Nemecsek");
+            try
+            {
+                nv.validation();
+            }
+            catch (Exception e)
+            {
+            }
+        }
     }
 }
