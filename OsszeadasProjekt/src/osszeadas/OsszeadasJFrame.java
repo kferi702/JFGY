@@ -30,6 +30,8 @@ public class OsszeadasJFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabelOsszeadando1 = new javax.swing.JLabel();
         jLabelOsszeadando2 = new javax.swing.JLabel();
+        jTextFieldOsszead1 = new javax.swing.JTextField();
+        jTextFieldOsszead2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,18 +46,26 @@ public class OsszeadasJFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelOsszeadando1)
-                    .addComponent(jLabelOsszeadando2))
-                .addContainerGap(301, Short.MAX_VALUE))
+                    .addComponent(jLabelOsszeadando2)
+                    .addComponent(jLabelOsszeadando1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldOsszead1, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+                    .addComponent(jTextFieldOsszead2))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabelOsszeadando1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelOsszeadando1)
+                    .addComponent(jTextFieldOsszead1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelOsszeadando2)
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelOsszeadando2)
+                    .addComponent(jTextFieldOsszead2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(221, Short.MAX_VALUE))
         );
 
         jLabelOsszeadando2.getAccessibleContext().setAccessibleName("Második szám:");
@@ -119,5 +129,7 @@ public class OsszeadasJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelOsszeadando1;
     private javax.swing.JLabel jLabelOsszeadando2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextFieldOsszead1;
+    private javax.swing.JTextField jTextFieldOsszead2;
     // End of variables declaration//GEN-END:variables
 }
