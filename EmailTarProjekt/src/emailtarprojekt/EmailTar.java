@@ -14,7 +14,7 @@ public class EmailTar {
 
     public void ellenorzes() throws Exception {
         if (ellenorzesNincsKukacEmailCimben()) {
-            throw new Exception("");
+            throw new Exception("Az email cím nem tartalmaz kukacot!");
         }
     }
 
