@@ -24,5 +24,19 @@ namespace Forma1.Validation.Tests
             {
             }
         }
+
+        [TestMethod()]
+        public void validationTestNameNotBeginsWithUppercase()
+        {
+            NameValidator nv = new NameValidator("nemecsek");
+            try
+            {
+                nv.validation();
+                Assert.Fail("Kisbetűvel kezdődő névre nem dob kivételt!");
+            }
+            catch (Exception e)
+            {
+            }
+        }
     }
 }
