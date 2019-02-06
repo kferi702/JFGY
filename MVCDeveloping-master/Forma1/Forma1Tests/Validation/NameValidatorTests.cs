@@ -49,6 +49,7 @@ namespace Forma1.Validation.Tests
             }
             catch (Exception e)
             {
+                Assert.Fail("Jó névre kivételt dob!");
             }
         }
     }
