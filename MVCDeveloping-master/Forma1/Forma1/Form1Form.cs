@@ -35,6 +35,7 @@ namespace Forma1
         private void buttonAddTeam_Click(object sender, EventArgs e)
         {
             string teamName = textBoxNewTeamName.Text;
+            errorProviderAddTeam.Clear();
             try
             {
                 controller.addTeamToF1(teamName);
