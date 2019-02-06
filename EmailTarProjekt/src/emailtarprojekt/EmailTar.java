@@ -12,4 +12,8 @@ public class EmailTar {
         this.email = email;
     }
 
+    public void ellenorzes() {
+
+    }
+
 }

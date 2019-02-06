@@ -1,5 +1,7 @@
 package emailtarprojekt;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -37,6 +39,20 @@ public class EmailTarTest {
         } catch (Exception e) {
             if (e.getMessage() != "EmailTar objektum üres email címmel nem jöhet létre!") {
                 fail("Email konstruktor üres emailcímre rossz szüvergű kivételt dob!");
+            }
+        }
+    }
+
+    @Test
+    public void testEllenorzesNincsKukac() {
+        System.out.println("testEllenorzesNincsKukac");
+        try {
+            EmailTar instance = new EmailTar("Peti.vasvari.hu");
+            instance.ellenorzes();
+            fail("Kukac nélküli e-mail címre az ellenőrzés nem dob kivételt!");
+        } catch (Exception e) {
+            if (e.getMessage() != "Az email cím nem tartalmaz kukacot!") {
+                fail("Kukac nélküli email cím esetén az ellenőrzés rossz szövegű kivételt dob!");
             }
         }
     }
