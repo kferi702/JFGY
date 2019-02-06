@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Forma1.Controller;
 
@@ -36,6 +29,21 @@ namespace Forma1
         {
             string teamName = listBoxTeam.SelectedItem.ToString();
             listBoxRacer.DataSource = controller.getTeamRacersName(teamName);
+        }
+
+        private void buttonAddTeam_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonUpdateTeam_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDeleteTeam_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
