@@ -40,7 +40,7 @@ public class EmailTar {
         }
 
         if (ellenorzesKukacElottTobbPont()) {
-            throw new Exception("");
+            throw new Exception("Az email cím kukac előtt több pontot tartalmaz!");
         }
     }
 
@@ -68,7 +68,7 @@ public class EmailTar {
      * vissza a függvény
      */
     private boolean ellenorzesKukacElottTobbPont() {
-        return false;
+        return true;
     }
 
     /**
