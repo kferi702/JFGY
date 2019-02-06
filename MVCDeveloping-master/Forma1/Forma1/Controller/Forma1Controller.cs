@@ -1,7 +1,6 @@
 ﻿using Forma1.MyExceptions;
 using System.Collections.Generic;
 using Forma1.Service;
-using System;
 using Forma1.Validation;
 
 namespace Forma1.Controller
@@ -49,7 +48,7 @@ namespace Forma1.Controller
             }
             catch (NameNotValidException e)
             {
-                throw new ControllerException($"{teamName} nem megfelelő!");
+                throw new ControllerException($"{teamName} nem megfelelő csapatnév!");
             }
         }
     }
