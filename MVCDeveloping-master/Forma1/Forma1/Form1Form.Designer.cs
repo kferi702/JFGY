@@ -33,7 +33,7 @@
             this.buttonUpdateTeam = new System.Windows.Forms.Button();
             this.buttonAddTeam = new System.Windows.Forms.Button();
             this.labelTeamName = new System.Windows.Forms.Label();
-            this.textBox = new System.Windows.Forms.TextBox();
+            this.textBoxNewTeamName = new System.Windows.Forms.TextBox();
             this.labelTeam = new System.Windows.Forms.Label();
             this.listBoxTeam = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -107,12 +107,12 @@
             this.labelTeamName.TabIndex = 11;
             this.labelTeamName.Text = "Csapat neve:";
             // 
-            // textBox
+            // textBoxNewTeamName
             // 
-            this.textBox.Location = new System.Drawing.Point(37, 458);
-            this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(155, 20);
-            this.textBox.TabIndex = 10;
+            this.textBoxNewTeamName.Location = new System.Drawing.Point(37, 458);
+            this.textBoxNewTeamName.Name = "textBoxNewTeamName";
+            this.textBoxNewTeamName.Size = new System.Drawing.Size(155, 20);
+            this.textBoxNewTeamName.TabIndex = 10;
             // 
             // labelTeam
             // 
@@ -321,7 +321,7 @@
             this.Controls.Add(this.buttonUpdateTeam);
             this.Controls.Add(this.buttonAddTeam);
             this.Controls.Add(this.labelTeamName);
-            this.Controls.Add(this.textBox);
+            this.Controls.Add(this.textBoxNewTeamName);
             this.Controls.Add(this.labelTeam);
             this.Controls.Add(this.listBoxTeam);
             this.Name = "Form1Form";
@@ -341,7 +341,7 @@
         private System.Windows.Forms.Button buttonUpdateTeam;
         private System.Windows.Forms.Button buttonAddTeam;
         private System.Windows.Forms.Label labelTeamName;
-        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.TextBox textBoxNewTeamName;
         private System.Windows.Forms.Label labelTeam;
         private System.Windows.Forms.ListBox listBoxTeam;
         private System.Windows.Forms.Button button2;

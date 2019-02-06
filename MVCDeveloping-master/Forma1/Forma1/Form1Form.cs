@@ -33,7 +33,8 @@ namespace Forma1
 
         private void buttonAddTeam_Click(object sender, EventArgs e)
         {
-            controller.addTeamToF1();
+            string teamName = textBoxNewTeamName.Text;
+            controller.addTeamToF1(teamName);
         }
 
         private void buttonUpdateTeam_Click(object sender, EventArgs e)

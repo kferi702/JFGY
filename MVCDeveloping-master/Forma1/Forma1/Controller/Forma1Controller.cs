@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Forma1.Service;
 
 namespace Forma1.Controller
@@ -30,6 +31,11 @@ namespace Forma1.Controller
             }
 
             return null;
+        }
+
+        public void addTeamToF1(string teamName)
+        {
+
         }
     }
 }
