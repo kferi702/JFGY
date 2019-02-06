@@ -27,6 +27,11 @@ public class OsszeadasJFrame extends javax.swing.JFrame {
         jLabelOsszeadando2.setText("Második szám:");
 
         jButtonOsszead.setText("Összeadás");
+        jButtonOsszead.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonOsszeadMouseClicked(evt);
+            }
+        });
 
         jButtonTorles.setText("Törlés");
         jButtonTorles.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -105,8 +110,22 @@ public class OsszeadasJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonTorlesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonTorlesMouseClicked
-        // CODE
+        jTextFieldOsszead1.setText("");
+        jTextFieldOsszead2.setText("");
+        jTextFieldOsszeg.setText("");
     }//GEN-LAST:event_jButtonTorlesMouseClicked
+
+    private void jButtonOsszeadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonOsszeadMouseClicked
+        String elsoSzam = jTextFieldOsszead1.getText();
+        String masodikSzam = jLabelOsszeadando2.getText();
+
+        double o1 = Double.parseDouble(elsoSzam);
+        double o2 = Double.parseDouble(masodikSzam);
+
+        double e = o1 + o2;
+
+        jTextFieldOsszeg.setText(String.valueOf(e));
+    }//GEN-LAST:event_jButtonOsszeadMouseClicked
 
     public static void main(String args[]) {
         try {
