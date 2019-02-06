@@ -37,11 +37,6 @@ namespace Forma1.Repository
             throw new F1Exception($"{name} nevű csapat nem létezik, nem lehet törölni!");
         }
 
-        internal bool isExistingTeamName(string teamName)
-        {
-            throw new NotImplementedException();
-        }
-
         public void update(string name, string newName)
         {
             foreach (Team t in teams)
@@ -53,11 +48,6 @@ namespace Forma1.Repository
                 }
             }
             throw new F1Exception($"{name} nevű csapat nem létezik, nem lehet módosítani!");
-        }
-
-        internal List<string> getRacerNameFromTheTeam()
-        {
-            throw new NotImplementedException();
         }
 
         public int getF1Salary()
@@ -80,6 +70,24 @@ namespace Forma1.Repository
             }
 
             return names;
+        }
+
+        public bool isExistingTeamName(string teamName)
+        {
+            foreach (Team t in teams)
+            {
+                if (t.getName() == teamName)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public List<string> getRacerNameFromTheTeam(string teamName)
+        {
+
         }
     }
 }

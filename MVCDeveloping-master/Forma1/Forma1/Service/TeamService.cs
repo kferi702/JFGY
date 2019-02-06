@@ -41,7 +41,7 @@ namespace Forma1.Service
 
         public List<string> getRacerNameFromTheTeam(string teamName)
         {
-            return f1Repository.getRacerNameFromTheTeam();
+            return f1Repository.getRacerNameFromTheTeam(teamName);
         }
     }
 }
