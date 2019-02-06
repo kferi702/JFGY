@@ -49,7 +49,7 @@ public class EmailTarTest {
         try {
             EmailTar instance = new EmailTar("Peti.vasvari.hu");
             instance.ellenorzes();
-            fail("Kukac nélküli e-mail címre az ellenőrzés nem dob kivételt!");
+            fail("Az ellenőrzés kukac nélküli e-mail címre az ellenőrzés nem dob kivételt!");
         } catch (Exception e) {
             if (e.getMessage() != "Az email cím nem tartalmaz kukacot!") {
                 fail("Kukac nélküli email cím esetén az ellenőrzés rossz szövegű kivételt dob!");
@@ -57,4 +57,42 @@ public class EmailTarTest {
         }
     }
 
+    @Test
+    public void testEllenorzesNagybetuKukacElott() {
+        System.out.println("testEllenorzesNagybetuKukacElott");
+        try {
+            EmailTar instance = new EmailTar("Peti@vasvari.hu");
+            instance.ellenorzes();
+            fail("Az ellenőrzés kukac előtt nagybetű esetén nem dob kivételt!");
+        } catch (Exception e) {
+            if (e.getMessage() != "Az email cím kukac előtt nagybetűt tartalmaz!") {
+                fail("Kukac előtt nagybetű és az ellenőrzés rossz szövegű kivételt dob!");
+            }
+        }
+    }
+
+    @Test
+    public void testEllenorzesNagybetuKisbetuEsTobbPiontKukacElott() {
+        System.out.println("testEllenorzesNagybetuKisbetuEsTobbPiontKukacElott");
+        try {
+            EmailTar instance = new EmailTar("Peti.p.p@vasvari.hu");
+            instance.ellenorzes();
+            fail("Az ellenőrzés kukac előtt több pont esetén nem dob kivételt!");
+        } catch (Exception e) {
+            if (e.getMessage() != "Az email cím kukac előtt több pontot tartalmaz!") {
+                fail("Kukac előtt több pont és az ellenőrzés rossz szövegű kivételt dob!");
+            }
+        }
+    }
+
+    @Test
+    public void testEllenorzesTokeletesEmailCim() {
+        System.out.println("testEllenorzesTokeletesEmailCim");
+        try {
+            EmailTar instance = new EmailTar("nagy.peti@vasvari.hu");
+            instance.ellenorzes();
+        } catch (Exception e) {
+            fail("Az ellenőrző jó, az email címre kivételt dobott!");
+        }
+    }
 }
