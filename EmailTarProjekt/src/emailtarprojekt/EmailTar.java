@@ -6,8 +6,8 @@ public class EmailTar {
 
     public EmailTar(String email) throws Exception {
 
-        if (email == "EmailTar objektum üres email címmel nem jöhet létre!") {
-            throw new Exception("");
+        if (email == "") {
+            throw new Exception("EmailTar objektum üres email címmel nem jöhet létre!");
         }
         this.email = email;
     }
