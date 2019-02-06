@@ -50,6 +50,8 @@ namespace Forma1.Controller
             {
                 throw new ControllerException($"{teamName} nem megfelelő csapatnév!");
             }
+
+            service.addTeam(teamName);
         }
     }
 }

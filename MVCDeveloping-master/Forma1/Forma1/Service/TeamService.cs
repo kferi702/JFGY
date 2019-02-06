@@ -39,5 +39,11 @@ namespace Forma1.Service
         {
             return f1Repository.getRacerNameFromTheTeam(teamName);
         }
+
+        public void addTeam(string teamName)
+        {
+            Team t = new Team(teamName);
+            f1Repository.add(t);
+        }
     }
 }
