@@ -87,7 +87,15 @@ namespace Forma1.Repository
 
         public List<string> getRacerNameFromTheTeam(string teamName)
         {
+            foreach (Team t in teams)
+            {
+                if (t.getName() == teamName)
+                {
+                    return t.getRacerNames();
+                }
+            }
 
+            return null;
         }
     }
 }

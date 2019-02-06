@@ -65,5 +65,17 @@ namespace Forma1.Repository
 
             //return result.Sum();
         }
+
+        public List<string> getRacerNames()
+        {
+            List<string> racerNamesList = new List<string>();
+
+            foreach (Racer r in racers)
+            {
+                racerNamesList.Add(r.getName());
+            }
+
+            return racerNamesList;
+        }
     }
 }
