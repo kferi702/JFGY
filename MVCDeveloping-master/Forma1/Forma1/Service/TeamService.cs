@@ -28,5 +28,20 @@ namespace Forma1.Service
         {
             return f1Repository.getTeamNamesList();
         }
+
+        public bool isExistingTeamName(string teamName)
+        {
+            if (f1Repository.isExistingTeamName(teamName))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public List<string> getRacerNameFromTheTeam(string teamName)
+        {
+            return f1Repository.getRacerNameFromTheTeam();
+        }
     }
 }

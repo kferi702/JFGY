@@ -26,5 +26,16 @@ namespace Forma1
             controller.initializeTestData();
             listBoxTeam.DataSource = controller.getTeamNamesList();
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void listBoxTeam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string teamName = listBoxTeam.SelectedItem.ToString();
+            listBoxRacer.DataSource = controller.getTeamRacersName(teamName);
+        }
     }
 }

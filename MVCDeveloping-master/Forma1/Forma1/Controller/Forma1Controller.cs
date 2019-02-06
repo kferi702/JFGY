@@ -25,5 +25,15 @@ namespace Forma1.Controller
         {
             return service.getTeamNamesList();
         }
+
+        public List<string> getTeamRacersName(string teamName)
+        {
+            if (service.isExistingTeamName(teamName))
+            {
+                return service.getRacerNameFromTheTeam(teamName);
+            }
+
+            return null;
+        }
     }
 }

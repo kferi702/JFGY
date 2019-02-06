@@ -127,6 +127,7 @@
             this.listBoxTeam.Name = "listBoxTeam";
             this.listBoxTeam.Size = new System.Drawing.Size(155, 329);
             this.listBoxTeam.TabIndex = 8;
+            this.listBoxTeam.SelectedIndexChanged += new System.EventHandler(this.listBoxTeam_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -261,6 +262,7 @@
             this.buttonExit.TabIndex = 29;
             this.buttonExit.Text = "Kilépés";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonComputeTeamSalary
             // 
