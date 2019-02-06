@@ -68,15 +68,9 @@ public class EmailTar {
      * vissza a függvény
      */
     private boolean ellenorzesKukacElottTobbPont() {
-        for (char c : email.toCharArray()) {
+        
+        
 
-            while (c != '@') {
-                if (email.contains(".")) {
-                    return true;
-                }
-            }
-        }
-        return false;
     }
 
     /**
