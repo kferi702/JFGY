@@ -52,6 +52,7 @@
     <Compile Include="Form1Form.Designer.cs">
       <DependentUpon>Form1Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyExceptions\ControllerException.cs" />
     <Compile Include="MyExceptions\F1Exception.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

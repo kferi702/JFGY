@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Forma1.Controller;
+using Forma1.MyExceptions;
 
 namespace Forma1
 {
@@ -34,17 +35,24 @@ namespace Forma1
         private void buttonAddTeam_Click(object sender, EventArgs e)
         {
             string teamName = textBoxNewTeamName.Text;
-            controller.addTeamToF1(teamName);
+            try
+            {
+                controller.addTeamToF1(teamName);
+            }
+            catch (ControllerException controlEx)
+            {
+                errorProviderAddTeam.SetError(buttonAddTeam, controlEx.Message);
+            }
         }
 
         private void buttonUpdateTeam_Click(object sender, EventArgs e)
         {
-            controller.updateTeamInF1();
+
         }
 
         private void buttonDeleteTeam_Click(object sender, EventArgs e)
         {
-            controller.deleteTeamFromF1();
+
         }
     }
 }

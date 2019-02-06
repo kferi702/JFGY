@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonInitializeData = new System.Windows.Forms.Button();
             this.buttonDeleteTeam = new System.Windows.Forms.Button();
             this.buttonUpdateTeam = new System.Windows.Forms.Button();
@@ -55,7 +56,9 @@
             this.textBoxTeamSalary = new System.Windows.Forms.TextBox();
             this.buttonComputeF1Salary = new System.Windows.Forms.Button();
             this.textBoxF1Salary = new System.Windows.Forms.TextBox();
+            this.errorProviderAddTeam = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddTeam)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonInitializeData
@@ -301,6 +304,10 @@
             this.textBoxF1Salary.Size = new System.Drawing.Size(155, 20);
             this.textBoxF1Salary.TabIndex = 33;
             // 
+            // errorProviderAddTeam
+            // 
+            this.errorProviderAddTeam.ContainerControl = this;
+            // 
             // Form1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +336,7 @@
             this.Text = "Forma 1.";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddTeam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,6 +371,7 @@
         private System.Windows.Forms.TextBox textBoxTeamSalary;
         private System.Windows.Forms.Button buttonComputeF1Salary;
         private System.Windows.Forms.TextBox textBoxF1Salary;
+        private System.Windows.Forms.ErrorProvider errorProviderAddTeam;
     }
 }
 

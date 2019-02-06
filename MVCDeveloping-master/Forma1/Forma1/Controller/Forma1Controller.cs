@@ -1,6 +1,7 @@
 ﻿using Forma1.MyExceptions;
 using System.Collections.Generic;
 using Forma1.Service;
+using System;
 
 namespace Forma1.Controller
 {
@@ -37,7 +38,7 @@ namespace Forma1.Controller
         {
             if (service.isExistingTeamName(teamName))
             {
-                throw new ControllerException("");
+                throw new ControllerException($"{teamName} csapat már létezik!");
             }
         }
     }
