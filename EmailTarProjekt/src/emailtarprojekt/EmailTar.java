@@ -36,11 +36,11 @@ public class EmailTar {
         }
 
         if (ellenorzesKukacElottTobbPont()) {
-            throw new Exception("");
+            throw new Exception("Az email cím kukac előtt több pontot tartalmaz!");
         }
 
-        if (ellenorzesKukacElottNagybetu()) {
-            throw new Exception("");
+        if (ellenorzesNagybetuKukacElott()) {
+            throw new Exception("Az email cím kukac előtt nagybetűt tartalmaz!");
         }
     }
 
@@ -68,15 +68,9 @@ public class EmailTar {
      * vissza a függvény
      */
     private boolean ellenorzesKukacElottTobbPont() {
-
         for (char c : email.toCharArray()) {
 
-            if () {
-
-                return false;
-            }
         }
-
         return true;
     }
 
@@ -87,16 +81,14 @@ public class EmailTar {
      * @return Ha van logikai hamissal, ellenkező esetben logikai igazzal tér
      * vissza a függvény
      */
-    private boolean ellenorzesKukacElottNagybetu() {
-
+    private boolean ellenorzesNagybetuKukacElott() {
         for (char c : email.toCharArray()) {
-            if () {
-
-                return false;
+            while (c != '@') {
+                if (Character.isUpperCase(c)) {
+                    return true;
+                }
             }
         }
-
-        return true;
-
+        return false;
     }
 }
