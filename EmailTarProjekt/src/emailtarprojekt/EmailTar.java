@@ -35,10 +35,6 @@ public class EmailTar {
             throw new Exception("Az email cím nem tartalmaz kukacot!");
         }
 
-        if (ellenorzesKukacElottTobbPont()) {
-            throw new Exception("Az email cím kukac előtt több pontot tartalmaz!");
-        }
-
         if (ellenorzesNagybetuKukacElott()) {
             throw new Exception("Az email cím kukac előtt nagybetűt tartalmaz!");
         }
@@ -68,10 +64,7 @@ public class EmailTar {
      * vissza a függvény
      */
     private boolean ellenorzesKukacElottTobbPont() {
-        for (char c : email.toCharArray()) {
-
-        }
-        return true;
+        return false;
     }
 
     /**
