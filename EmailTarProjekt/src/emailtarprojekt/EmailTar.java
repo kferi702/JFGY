@@ -72,11 +72,8 @@ public class EmailTar {
         String[] kukac = email.split("@");
         String kukacElott = kukac[0];
 
-        for (char c : kukacElott.toCharArray()) {
-            if (String.valueOf(c).contains(".")) {
-                return true;
-            }
-        }
+        // Üzemi kód
+        
         return false;
     }
 
