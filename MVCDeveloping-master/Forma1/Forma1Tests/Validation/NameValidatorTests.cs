@@ -12,9 +12,10 @@ namespace Forma1.Validation.Tests
     public class NameValidatorTests
     {
         [TestMethod()]
-        public void validationTest()
+        public void validationTestNameIsEmpty()
         {
-            Assert.Fail();
+            NameValidator nameValidator = new NameValidator("");
+            nameValidator.validation();
         }
     }
 }
