@@ -69,7 +69,7 @@ public class EmailTar {
      */
     private boolean ellenorzesKukacElottTobbPont() {
         
-        
+        return false;
 
     }
 
