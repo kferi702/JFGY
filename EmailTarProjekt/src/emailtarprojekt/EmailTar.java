@@ -64,7 +64,7 @@ public class EmailTar {
      * Ellenőrző függvény, amely ellenőrzi a kukac előtt van-e több pont
      * karakter
      *
-     * @return Ha van logikai hamissal, ellenkező esetben logikai igazzal tér
+     * @return Ha van logikai igazzal, ellenkező esetben logikai hamissal tér
      * vissza a függvény
      */
     private boolean ellenorzesKukacElottTobbPont() {
