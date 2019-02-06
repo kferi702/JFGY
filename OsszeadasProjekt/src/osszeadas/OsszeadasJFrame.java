@@ -32,12 +32,22 @@ public class OsszeadasJFrame extends javax.swing.JFrame {
         jLabelOsszeadando2 = new javax.swing.JLabel();
         jTextFieldOsszead1 = new javax.swing.JTextField();
         jTextFieldOsszead2 = new javax.swing.JTextField();
+        jTextFieldOsszeg = new javax.swing.JTextField();
+        jButtonOsszead = new javax.swing.JButton();
+        jButtonTorles = new javax.swing.JButton();
+        jButtonKilepes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabelOsszeadando1.setText("Első szám:");
 
         jLabelOsszeadando2.setText("Második szám:");
+
+        jButtonOsszead.setText("Összeadás");
+
+        jButtonTorles.setText("Törlés");
+
+        jButtonKilepes.setText("Kilépés");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -46,12 +56,21 @@ public class OsszeadasJFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelOsszeadando2)
-                    .addComponent(jLabelOsszeadando1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldOsszead1, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-                    .addComponent(jTextFieldOsszead2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelOsszeadando2)
+                            .addComponent(jLabelOsszeadando1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldOsszeg)
+                            .addComponent(jTextFieldOsszead1)
+                            .addComponent(jTextFieldOsszead2)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButtonOsszead)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                        .addComponent(jButtonTorles, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(jButtonKilepes, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -65,7 +84,14 @@ public class OsszeadasJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelOsszeadando2)
                     .addComponent(jTextFieldOsszead2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(jTextFieldOsszeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonOsszead)
+                    .addComponent(jButtonTorles)
+                    .addComponent(jButtonKilepes))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
 
         jLabelOsszeadando2.getAccessibleContext().setAccessibleName("Második szám:");
@@ -126,10 +152,14 @@ public class OsszeadasJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonKilepes;
+    private javax.swing.JButton jButtonOsszead;
+    private javax.swing.JButton jButtonTorles;
     private javax.swing.JLabel jLabelOsszeadando1;
     private javax.swing.JLabel jLabelOsszeadando2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextFieldOsszead1;
     private javax.swing.JTextField jTextFieldOsszead2;
+    private javax.swing.JTextField jTextFieldOsszeg;
     // End of variables declaration//GEN-END:variables
 }
