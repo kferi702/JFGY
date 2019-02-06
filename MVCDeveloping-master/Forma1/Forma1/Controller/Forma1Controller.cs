@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Forma1.MyExceptions;
 using System.Collections.Generic;
 using Forma1.Service;
 
@@ -35,7 +35,10 @@ namespace Forma1.Controller
 
         public void addTeamToF1(string teamName)
         {
-
+            if (service.isExistingTeamName(teamName))
+            {
+                throw new ControllerException("");
+            }
         }
     }
 }
