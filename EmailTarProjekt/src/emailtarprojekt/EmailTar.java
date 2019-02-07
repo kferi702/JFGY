@@ -80,7 +80,7 @@ public class EmailTar {
     }
 
     /**
-     * Ellenőrző függvény, amely ellenrőzi a kukac előtt van-e nagybetűs
+     * Ellenőrző függvény, amely ellenőrzi a kukac előtt van-e nagybetűs
      * karakter
      *
      * @return Ha van logikai igazzal, ellenkező esetben logikai hamissal tér
