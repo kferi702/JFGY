@@ -19,10 +19,10 @@ public class EmailTar {
      * @param email Input e-mail cím
      * @throws Exception
      */
-    public EmailTar(String email) throws Exception {
+    public EmailTar(String email) throws EmailTarException {
 
         if (email == "") {
-            throw new Exception("EmailTar objektum üres email címmel nem jöhet létre!");
+            throw new EmailTarException("EmailTar objektum üres email címmel nem jöhet létre!");
         }
         this.email = email;
     }
@@ -30,20 +30,20 @@ public class EmailTar {
     /**
      * Ellenőrzés vezérlő metódus
      *
-     * @throws Exception
+     * @throws EmailTarException
      */
-    public void ellenorzes() throws Exception {
+    public void ellenorzes() throws EmailTarException {
 
         if (ellenorzesNincsKukacEmailCimben()) {
-            throw new Exception("Az email cím nem tartalmaz kukacot!");
+            throw new EmailTarException("Az email cím nem tartalmaz kukacot!");
         }
 
         if (ellenorzesNagybetuKukacElott()) {
-            throw new Exception("Az email cím kukac előtt nagybetűt tartalmaz!");
+            throw new EmailTarException("Az email cím kukac előtt nagybetűt tartalmaz!");
         }
 
         if (ellenorzesKukacElottTobbPont()) {
-            throw new Exception("Az email cím kukac előtt több pontot tartalmaz!");
+            throw new EmailTarException("Az email cím kukac előtt több pontot tartalmaz!");
         }
     }
 

@@ -1,12 +1,7 @@
 package emailtarprojekt;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import java.util.logging.*;
+import org.junit.*;
 import static org.junit.Assert.*;
 
 /**
@@ -44,7 +39,7 @@ public class EmailTarTest {
         try {
             EmailTar et = new EmailTar("");
             fail("EmailTar konstruktor üres email címre nem dob kivételt!");
-        } catch (Exception e) {
+        } catch (EmailTarException e) {
             if (e.getMessage() != "EmailTar objektum üres email címmel nem jöhet létre!") {
                 fail("Rossz szövegű kivételt dob!");
             }
@@ -58,7 +53,7 @@ public class EmailTarTest {
             EmailTar instance = new EmailTar("Peti.vasvari.hu");
             instance.ellenorzes();
             fail("Az ellenőrzés kukac nélküli e-mail címre az ellenőrzés nem dob kivételt!");
-        } catch (Exception e) {
+        } catch (EmailTarException e) {
             if (e.getMessage() != "Az email cím nem tartalmaz kukacot!") {
                 fail("Rossz szövegű kivételt dob!");
             }
@@ -72,7 +67,7 @@ public class EmailTarTest {
             EmailTar instance = new EmailTar("Peti@vasvari.hu");
             instance.ellenorzes();
             fail("Az ellenőrzés kukac előtt nagybetű esetén nem dob kivételt!");
-        } catch (Exception e) {
+        } catch (EmailTarException e) {
             if (e.getMessage() != "Az email cím kukac előtt nagybetűt tartalmaz!") {
                 fail("Rossz szövegű kivételt dob!");
             }
@@ -86,7 +81,7 @@ public class EmailTarTest {
             EmailTar instance = new EmailTar("peti.p.p@vaSvari.hu");
             instance.ellenorzes();
             fail("Az ellenőrzés kukac előtt több pont esetén nem dob kivételt!");
-        } catch (Exception e) {
+        } catch (EmailTarException e) {
             if (e.getMessage() != "Az email cím kukac előtt több pontot tartalmaz!") {
                 fail("Rossz szövegű kivételt dob!");
             }
@@ -99,7 +94,7 @@ public class EmailTarTest {
         try {
             EmailTar instance = new EmailTar("nagy.peti@vasvari.hu");
             instance.ellenorzes();
-        } catch (Exception e) {
+        } catch (EmailTarException e) {
             fail("Az ellenőrző jó, az email címre kivételt dobott!");
         }
     }
