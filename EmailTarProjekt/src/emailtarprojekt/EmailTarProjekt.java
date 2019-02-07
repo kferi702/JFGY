@@ -1,8 +1,16 @@
+/**
+ * EmailTar projekt
+ */
 package emailtarprojekt;
 
+/**
+ * EmailTar projekt fő osztálya
+ */
 public class EmailTarProjekt {
 
     /**
+     * Az alkalmazás belépési pontja
+     *
      * @param args the command line arguments
      */
     public static void main(String[] args) {

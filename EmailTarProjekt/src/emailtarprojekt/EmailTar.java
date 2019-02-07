@@ -1,3 +1,6 @@
+/**
+ * EmailTar projekt
+ */
 package emailtarprojekt;
 
 /**
@@ -73,7 +76,6 @@ public class EmailTar {
         String kukacElott = kukac[0];
 
         // Üzemi kód
-        
         return false;
     }
 

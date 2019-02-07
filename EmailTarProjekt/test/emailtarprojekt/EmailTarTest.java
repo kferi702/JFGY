@@ -9,8 +9,16 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * Unit teszt osztály
+ *
+ * @author Bence
+ */
 public class EmailTarTest {
 
+    /**
+     * Konstruktor
+     */
     public EmailTarTest() {
     }
 
