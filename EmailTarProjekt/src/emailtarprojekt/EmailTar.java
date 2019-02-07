@@ -14,7 +14,7 @@ public class EmailTar {
     private String email;
 
     /**
-     * Konstruktor
+     * EmailTar konstruktora
      *
      * @param email Input e-mail cím
      * @throws Exception
