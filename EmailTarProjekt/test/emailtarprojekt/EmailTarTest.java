@@ -6,8 +6,6 @@ import static org.junit.Assert.*;
 
 /**
  * Unit teszt osztály
- *
- * @author Bence
  */
 public class EmailTarTest {
 
