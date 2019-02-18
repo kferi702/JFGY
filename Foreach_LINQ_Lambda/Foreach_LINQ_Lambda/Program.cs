@@ -90,6 +90,8 @@ namespace Foreach_LINQ_Lambda
             {
                 Console.WriteLine(szam);
             }
+
+            Console.ReadKey();
         }
     }
 }
