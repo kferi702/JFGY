@@ -12,13 +12,14 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
 
         private static double atlag()
         {
-
+            return szamok.Average();
         }
 
         public static void Main(string[] args)
         {
             VeletlenEgeszSzamok vesz = new VeletlenEgeszSzamok();
             szamok = vesz.getSzamok();
+            Console.WriteLine($"Szaámok átlaga: {atlag()}");
         }
     }
 }
