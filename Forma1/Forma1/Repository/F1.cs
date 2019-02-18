@@ -24,7 +24,15 @@ namespace Forma1.Repository
 
         public List<Racer> getRacers(string teamName)
         {
+            foreach (Team t in teams)
+            {
+                if (t.getName() == teamName)
+                {
+                    return t.getRacers();
+                }
+            }
 
+            return null;
         }
 
         public void add(Team t)
