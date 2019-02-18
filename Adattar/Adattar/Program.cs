@@ -15,11 +15,24 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             return szamok.Average();
         }
 
+        private static double pozitivAtlag()
+        {
+            var eredmeny =
+                from int szam in szamok
+                where szam > 0
+                select szam;
+
+            return eredmeny.Average();
+        }
+
         public static void Main(string[] args)
         {
             VeletlenEgeszSzamok vesz = new VeletlenEgeszSzamok();
             szamok = vesz.getSzamok();
-            Console.WriteLine($"Szaámok átlaga: {atlag()}");
+            Console.WriteLine($"Számok átlaga: {atlag()}");
+            Console.WriteLine($"Pozitív számok átlaga: {pozitivAtlag()}");
+
+            Console.ReadKey();
         }
     }
 }
