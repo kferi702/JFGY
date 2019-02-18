@@ -25,5 +25,15 @@ namespace Forma1
             controller.provideTestData();
             listBoxTeam.DataSource = controller.getTeamNames();
         }
+
+        private void listBoxTeam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxTeam.SelectedIndex < 0)
+            {
+                return;
+            }
+
+            listBoxRacer.DataSource = controller.getRacers();
+        }
     }
 }
