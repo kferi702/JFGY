@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace ListakbanLevoAdatokKezeleseOOPalapokon
 {
-    class Program
+    public class Program
     {
-        static List<int> szamok;
-        static void Main(string[] args)
+        private static List<int> szamok;
+
+        private static double atlag()
+        {
+
+        }
+
+        public static void Main(string[] args)
         {
             VeletlenEgeszSzamok vesz = new VeletlenEgeszSzamok();
             szamok = vesz.getSzamok();
