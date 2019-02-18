@@ -33,8 +33,10 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
         private static double hanySzazalekPozitiv()
         {
             double pozitivDarab = szamok.Count(x => x > 0);
-            double szazalek = pozitivDarab / szamok.Count;
-            return szazalek;
+            double osszesSzam = szamok.Count;
+
+            double result = pozitivDarab / osszesSzam;
+            return result;
         }
 
         public static void Main(string[] args)
