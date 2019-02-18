@@ -28,7 +28,7 @@ namespace Forma1
 
         private void listBoxTeam_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBoxTeam.SelectedIndex > 0)
+            if (listBoxTeam.SelectedIndex >= 0)
             {
                 string teamName = listBoxTeam.SelectedItem.ToString();
                 listBoxRacer.DataSource = controller.getTeamRacersName(teamName);
