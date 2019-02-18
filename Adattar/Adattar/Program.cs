@@ -25,12 +25,28 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             return eredmeny.Average();
         }
 
+        private static int hanySzamVan()
+        {
+            return szamok.Count;
+        }
+
+        private static double hanySzazalekPozitiv()
+        {
+            double pozitivDarab = szamok.Count(x => x > 0);
+            double szazalek = pozitivDarab / szamok.Count;
+            return szazalek;
+        }
+
         public static void Main(string[] args)
         {
             VeletlenEgeszSzamok vesz = new VeletlenEgeszSzamok();
             szamok = vesz.getSzamok();
+
             Console.WriteLine($"Számok átlaga: {Math.Round(atlag(), 2)}");
             Console.WriteLine($"Pozitív számok átlaga: {Math.Round(pozitivAtlag(), 2)}");
+
+            Console.WriteLine($"Ennyi szám van a listában: {hanySzamVan()}");
+            Console.WriteLine($"Ennyi százalék poizítv: {hanySzazalekPozitiv()}");
 
             Console.ReadKey();
         }
