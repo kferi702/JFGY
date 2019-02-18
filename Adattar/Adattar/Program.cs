@@ -29,8 +29,8 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
         {
             VeletlenEgeszSzamok vesz = new VeletlenEgeszSzamok();
             szamok = vesz.getSzamok();
-            Console.WriteLine($"Számok átlaga: {atlag()}");
-            Console.WriteLine($"Pozitív számok átlaga: {pozitivAtlag()}");
+            Console.WriteLine($"Számok átlaga: {Math.Round(atlag(), 2)}");
+            Console.WriteLine($"Pozitív számok átlaga: {Math.Round(pozitivAtlag(), 2)}");
 
             Console.ReadKey();
         }
