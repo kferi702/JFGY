@@ -48,7 +48,7 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             Console.WriteLine($"Pozitív számok átlaga: {Math.Round(pozitivAtlag(), 2)}");
 
             Console.WriteLine($"Ennyi szám van a listában: {hanySzamVan()}");
-            Console.WriteLine($"Ennyi százalék poizítv: {hanySzazalekPozitiv()} %.");
+            Console.WriteLine($"Ennyi százalék poizítv: {Math.Round(hanySzazalekPozitiv(), 2)} %.");
 
             Console.ReadKey();
         }
