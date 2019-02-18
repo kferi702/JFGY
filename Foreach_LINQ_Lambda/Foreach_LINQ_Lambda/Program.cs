@@ -38,6 +38,20 @@ namespace Foreach_LINQ_Lambda
 
             int indexUtolsoNagyobb15 = szamok.FindLastIndex(x => x > 15);
             Console.WriteLine("Utolsó nagyobb >15 indexe: " + indexUtolsoNagyobb15);
+
+            List<int> osszesNagyobb15 = szamok.FindAll(x => x > 15);
+            Console.WriteLine("összes >15 a következő: ");
+            foreach (int szam in osszesNagyobb15)
+            {
+                Console.WriteLine(szam);
+            }
+
+            var osszesKisebb15 = szamok.Where(x => x < 15);
+            Console.WriteLine("Összes <15 a következő: ");
+            foreach (int elem in osszesNagyobb15)
+            {
+                Console.WriteLine(elem);
+            }
         }
     }
 }
