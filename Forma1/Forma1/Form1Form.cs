@@ -34,7 +34,7 @@ namespace Forma1
             }
 
             string teamName = listBoxTeam.SelectedItem.ToString();
-            listBoxRacer.DataSource = controller.getRacers(teamName);
+            listBoxRacer.DataSource = controller.getTeamRacersName(teamName);
         }
     }
 }
