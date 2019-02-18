@@ -52,6 +52,24 @@ namespace Foreach_LINQ_Lambda
             {
                 Console.WriteLine(elem);
             }
+
+            int sum = szamok.Sum();
+            Console.WriteLine("Számok összege: " + sum);
+
+            int sum2 = szamok.Sum(x => Math.Abs(x));
+            Console.WriteLine("Számok abszolútértékének összege: " + sum2);
+
+            double avg = szamok.Average();
+            Console.WriteLine("Számok átlaga: " + avg);
+
+            double avg2 = szamok.Average(x => Math.Abs(x));
+            Console.WriteLine("Számok abszolútértékének átkaga: " + avg2);
+
+            int max = szamok.Max();
+            Console.WriteLine("Számok közül a legnagyobb" + max);
+
+            int max2 = szamok.Max(x => Math.Abs(x));
+            Console.WriteLine("");
         }
     }
 }
