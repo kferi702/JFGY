@@ -53,14 +53,14 @@ namespace Forma1.Repository
                 }
                 index = index + 1;
             }
-            throw new RepositoryException(teamName+" csapat nem létezik, nem lehet törölni");
+            throw new RepositoryException(teamName + " csapat nem létezik, nem lehet törölni");
 
         }
 
         public int getF1Salary()
         {
             int f1Salary = 0;
-            foreach(Team t in teams)
+            foreach (Team t in teams)
             {
                 f1Salary = f1Salary + t.getTeamSalary();
             }
