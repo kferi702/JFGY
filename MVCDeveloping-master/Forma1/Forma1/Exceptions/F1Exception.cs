@@ -9,6 +9,7 @@ namespace Forma1.Exceptions
     public class F1Exception : Exception
     {
         public F1Exception(string message) : base(message)
-        { }
+        {
+        }
     }
 }
