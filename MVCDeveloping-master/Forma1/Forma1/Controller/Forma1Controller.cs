@@ -1,4 +1,4 @@
-﻿using Forma1.MyExceptions;
+﻿using Forma1.Exceptions;
 using System.Collections.Generic;
 using Forma1.Service;
 using Forma1.Validation;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Forma1.Controller;
-using Forma1.MyExceptions;
+using Forma1.Exceptions;
 
 namespace Forma1
 {

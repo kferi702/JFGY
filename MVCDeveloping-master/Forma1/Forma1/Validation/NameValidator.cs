@@ -1,5 +1,5 @@
 ﻿using System;
-using Forma1.MyExceptions;
+using Forma1.Exceptions;
 
 namespace Forma1.Validation
 {
