@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Forma1.MyExceptions
+namespace Forma1.Exceptions
 {
     public class F1Exception : Exception
     {
