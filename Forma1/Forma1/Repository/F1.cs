@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Forma1.Model;
 
 namespace Forma1.Repository
 {
@@ -21,7 +22,20 @@ namespace Forma1.Repository
             return teams;
         }
 
+        public List<Racer> getRacers(string teamName)
+        {
+            List<Racer> racers = new List<Racer>();
 
+            foreach (Team t in teams)
+            {
+                if (t.getName() == teamName)
+                {
+
+                }
+            }
+
+            return racers;
+        }
 
         public void add(Team t)
         {

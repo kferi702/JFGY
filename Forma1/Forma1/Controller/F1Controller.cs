@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Forma1.Model;
 
 namespace Forma1.Controller
 {
@@ -31,6 +32,19 @@ namespace Forma1.Controller
                 teamNames.Add(t.getName());
             }
             return teamNames;
+        }
+
+        public List<string> getTeamRacersName(string teamName)
+        {
+            List<Racer> racers = service.getRacers(teamName);
+            List<string> racersName = new List<string>();
+
+            foreach (Racer r in racers)
+            {
+                racersName.Add(r.getName());
+            }
+
+            return racersName;
         }
     }
 }

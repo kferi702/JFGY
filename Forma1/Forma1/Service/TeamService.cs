@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Forma1.Repository;
+using Forma1.Model;
 
 namespace Forma1.Service
 {
@@ -25,6 +26,9 @@ namespace Forma1.Service
             return forma1Repository.getTeam();
         }
 
-        
+        public List<Racer> getRacers(string teamName)
+        {
+            return forma1Repository.getRacers(teamName);
+        }
     }
 }

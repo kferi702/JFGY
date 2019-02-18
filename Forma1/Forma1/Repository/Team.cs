@@ -23,6 +23,11 @@ namespace Forma1.Repository
             return name;
         }
 
+        public List<Racer> getRacers()
+        {
+            return racers;
+        }
+
         /// <summary>
         /// Csapat törlésének előkészítése
         /// A listáből minden versenyzőt törlünk
