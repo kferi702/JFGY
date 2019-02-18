@@ -9,6 +9,7 @@ namespace Forma1.Exceptions
     public class TeamException : Exception
     {
         public TeamException(string message) : base(message)
-        { }
+        {
+        }
     }
 }
