@@ -13,13 +13,13 @@ namespace Forma1.Model
         private int age;
         private int salary;
 
-        public Racer(int id, string name, int age,int salary)
+        public Racer(int id, string name, int age, int salary)
         {
             this.id = id;
             this.name = name;
             this.age = age;
             this.salary = salary;
-        }        
+        }
 
         public void setName(string name)
         {
@@ -35,8 +35,6 @@ namespace Forma1.Model
         {
             this.salary = salary;
         }
-
-
 
         public string getName()
         {
@@ -68,9 +66,7 @@ namespace Forma1.Model
 
         public override string ToString()
         {
-            return id+",  "+name+" "+age+" éves és fizetése"+salary;
+            return id + ",  " + name + " " + age + " éves és fizetése" + salary;
         }
-
-        
     }
 }
