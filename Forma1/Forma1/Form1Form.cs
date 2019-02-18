@@ -33,7 +33,8 @@ namespace Forma1
                 return;
             }
 
-            listBoxRacer.DataSource = controller.getRacers();
+            string teamName = listBoxTeam.SelectedItem.ToString();
+            listBoxRacer.DataSource = controller.getRacers(teamName);
         }
     }
 }
