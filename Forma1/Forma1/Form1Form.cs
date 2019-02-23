@@ -36,5 +36,26 @@ namespace Forma1
             string teamName = listBoxTeam.SelectedItem.ToString();
             listBoxRacer.DataSource = controller.getTeamRacersName(teamName);
         }
+
+        private void buttonComputeF1Salary_Click(object sender, EventArgs e)
+        {
+            textBoxF1Salary.Text = controller.getF1Salary();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void buttonComputeTeamSalary_Click(object sender, EventArgs e)
+        {
+            if (listBoxTeam.SelectedIndex > 0)
+            {
+                return;
+            }
+
+            string teamName = listBoxTeam.SelectedItem.ToString();
+            textBoxTeamSalary.Text = controller.getTeamSalary(teamName);
+        }
     }
 }

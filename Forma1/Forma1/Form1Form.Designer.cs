@@ -262,6 +262,7 @@
             this.buttonExit.TabIndex = 29;
             this.buttonExit.Text = "Kilépés";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonComputeTeamSalary
             // 
@@ -271,6 +272,7 @@
             this.buttonComputeTeamSalary.TabIndex = 30;
             this.buttonComputeTeamSalary.Text = "Csapat össz bérkifeizetése:";
             this.buttonComputeTeamSalary.UseVisualStyleBackColor = true;
+            this.buttonComputeTeamSalary.Click += new System.EventHandler(this.buttonComputeTeamSalary_Click);
             // 
             // textBoxTeamSalary
             // 
@@ -288,6 +290,7 @@
             this.buttonComputeF1Salary.TabIndex = 32;
             this.buttonComputeF1Salary.Text = "F1 össz bérkifeizetése:";
             this.buttonComputeF1Salary.UseVisualStyleBackColor = true;
+            this.buttonComputeF1Salary.Click += new System.EventHandler(this.buttonComputeF1Salary_Click);
             // 
             // textBoxF1Salary
             // 
@@ -321,6 +324,7 @@
             this.Controls.Add(this.labelTeam);
             this.Controls.Add(this.listBoxTeam);
             this.Name = "Form1Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Forma 1.";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

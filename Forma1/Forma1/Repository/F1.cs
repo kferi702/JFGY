@@ -57,12 +57,26 @@ namespace Forma1.Repository
 
         }
 
+        public int getTeamSalary(string teamName)
+        {
+            int teamSalary = 0;
+
+            foreach (Team t in teams)
+            {
+                if (teamName == t.getName())
+                {
+                    teamSalary += t.getTeamSalary();
+                }
+            }
+            return teamSalary;
+        }
+
         public int getF1Salary()
         {
             int f1Salary = 0;
             foreach (Team t in teams)
             {
-                f1Salary = f1Salary + t.getTeamSalary();
+                f1Salary += t.getTeamSalary();
             }
             return f1Salary;
         }
