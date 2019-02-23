@@ -39,16 +39,50 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             return result;
         }
 
+
+        private static List<string> mozi;
+
+        private static void kiírMozi()
+        {
+            foreach (string sor in mozi)
+            {
+                foreach (char szek in sor)
+                {
+                    if (szek == 'x')
+                    {
+                        Console.Write('F');
+                    }
+                    else
+                    {
+                        Console.Write('U');
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
         public static void Main(string[] args)
         {
-            VeletlenEgeszSzamok vesz = new VeletlenEgeszSzamok();
-            szamok = vesz.getSzamok();
+            /*
+             * 1. feladat
+             */
+            
+            //VeletlenEgeszSzamok veletlenEgeszSzamok = new VeletlenEgeszSzamok();
+            //szamok = veletlenEgeszSzamok.getSzamok();
 
-            Console.WriteLine($"Számok átlaga: {Math.Round(atlag(), 2)}");
-            Console.WriteLine($"Pozitív számok átlaga: {Math.Round(pozitivAtlag(), 2)}");
+            //Console.WriteLine($"Számok átlaga: {Math.Round(atlag(), 2)}");
+            //Console.WriteLine($"Pozitív számok átlaga: {Math.Round(pozitivAtlag(), 2)}");
 
-            Console.WriteLine($"Ennyi szám van a listában: {hanySzamVan()}");
-            Console.WriteLine($"Ennyi százalék poizítv: {Math.Round(hanySzazalekPozitiv(), 2)} %.");
+            //Console.WriteLine($"Ennyi szám van a listában: {hanySzamVan()}");
+            //Console.WriteLine($"Ennyi százalék poizítv: {Math.Round(hanySzazalekPozitiv(), 2)} %.");
+
+            /*
+             * 2. feladat
+             */
+
+            MoziSzekSorok moziSzekSorok = new MoziSzekSorok();
+            mozi = moziSzekSorok.getAdatok();
+            kiírMozi();
 
             Console.ReadKey();
         }
