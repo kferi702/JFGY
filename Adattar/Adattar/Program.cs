@@ -61,12 +61,29 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             }
         }
 
+        private static int szabadSzekekSzama(int sor)
+        {
+            string sorok = mozi.ElementAt(sor);
+
+            int counter = 0;
+
+            foreach (char szek in sorok)
+            {
+                if (szek == 'o')
+                {
+                    counter++;
+                }
+            }
+
+            return counter;
+        }
+
         public static void Main(string[] args)
         {
             /*
              * 1. feladat
              */
-            
+
             //VeletlenEgeszSzamok veletlenEgeszSzamok = new VeletlenEgeszSzamok();
             //szamok = veletlenEgeszSzamok.getSzamok();
 
@@ -83,6 +100,7 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             MoziSzekSorok moziSzekSorok = new MoziSzekSorok();
             mozi = moziSzekSorok.getAdatok();
             kiírMozi();
+            Console.WriteLine(szabadSzekekSzama(3));
 
             Console.ReadKey();
         }
