@@ -115,7 +115,7 @@ public class OsszeadasJFrame extends javax.swing.JFrame {
 
     private void jButtonOsszeadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonOsszeadMouseClicked
         String elsoSzam = jTextFieldOsszead1.getText();
-        String masodikSzam = jLabelOsszeadando2.getText();
+        String masodikSzam = jTextFieldOsszead2.getText();
 
         double o1 = Double.parseDouble(elsoSzam);
         double o2 = Double.parseDouble(masodikSzam);
