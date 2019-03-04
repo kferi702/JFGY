@@ -55,5 +55,10 @@ namespace Forma1.Repository
         {
             name = newName;
         }
+
+        public List<string> getRacerNames()
+        {
+            List<string> names = new List<string>();
+        }
     }
 }
