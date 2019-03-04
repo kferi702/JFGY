@@ -1,9 +1,5 @@
 ﻿using Forma1.Model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Forma1.Repository
 {
@@ -57,7 +53,7 @@ namespace Forma1.Repository
         /// <param name="newName">Csapat új neve</param>
         public void update(string newName)
         {
-            this.name = newName;
+            name = newName;
         }
     }
 }
