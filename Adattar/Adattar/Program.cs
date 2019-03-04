@@ -118,14 +118,34 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             return Math.Round(result, 2);
         }
 
-        private static int hanyszorSzerepeltEgymasUtanKetFej()
+        private static int hanyszorSzerepeltDuplaFF()
         {
-            for (int i = 0; i < getKiserletekSzama(); i++)
+            int dbDuplaF = 0;
+            int dbF = 0;
+            foreach (char dobas in kiserlet)
             {
+                if (dobas == 'F')
+                {
+                    dbF++;
+                }
 
+                if ((dobas == 'I') && (dbDuplaF == 2))
+                {
+                    dbDuplaF++;
+                }
+
+                if (dobas == 'I')
+                {
+                    dbF = 0;
+                }
             }
 
-            return 1;
+            if (dbF == 2)
+            {
+                dbDuplaF++;
+            }
+
+            return dbDuplaF;
         }
 
         #endregion
@@ -164,6 +184,7 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             Console.WriteLine(getIrasokSzama());
             Console.WriteLine(getRelativGyakorisagFej());
             Console.WriteLine(getRelativGyakorisagIras());
+            Console.WriteLine(hanyszorSzerepeltDuplaFF());
 
 
             #endregion
