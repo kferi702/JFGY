@@ -57,7 +57,7 @@ namespace Forma1.Repository
         /// <param name="newName">Csapat új neve</param>
         public void update(string newName)
         {
-            this.name = newName;
+            name = newName;
         }
     }
 }
