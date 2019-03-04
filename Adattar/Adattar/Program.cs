@@ -96,9 +96,24 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
         {
             return kiserlet.Count(x => x == 'F');
         }
+
         private static int getIrasokSzama()
         {
             return kiserlet.Count(x => x == 'I');
+        }
+
+        private static double getRelativGyakorisagFej()
+        {
+            double osszesDobas = kiserlet.Count;
+            double result = kiserlet.Count(x => x == 'F');
+            return result / osszesDobas * 100;
+        }
+
+        private static double getRelativGyakorisagIras()
+        {
+            double osszesDobas = kiserlet.Count;
+            double result = kiserlet.Count(x => x == 'I');
+            return result / osszesDobas * 100;
         }
 
         #endregion
@@ -135,8 +150,8 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             Console.WriteLine(getKiserletekSzama());
             Console.WriteLine(getFejekSzama());
             Console.WriteLine(getIrasokSzama());
-            Console.WriteLine();
-
+            Console.WriteLine(getRelativGyakorisagFej());
+            Console.WriteLine(getRelativGyakorisagIras());
 
 
             #endregion
