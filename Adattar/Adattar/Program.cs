@@ -107,7 +107,7 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             int osszesDobas = getKiserletekSzama();
             int fejek = getFejekSzama();
             double result = (double)fejek / osszesDobas * 100;
-            return Math.Round(result);
+            return Math.Round(result, 2);
         }
 
         private static double getRelativGyakorisagIras()
@@ -115,7 +115,17 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             int osszesDobas = getKiserletekSzama();
             int irasok = getIrasokSzama();
             double result = (double)irasok / osszesDobas * 100;
-            return Math.Round(result);
+            return Math.Round(result, 2);
+        }
+
+        private static int hanyszorSzerepeltEgymasUtanKetFej()
+        {
+            for (int i = 0; i < getKiserletekSzama(); i++)
+            {
+
+            }
+
+            return 1;
         }
 
         #endregion
