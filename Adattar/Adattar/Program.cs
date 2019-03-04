@@ -148,6 +148,11 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             return dbDuplaF;
         }
 
+        private static double maximum()
+        {
+            return 1;
+        }
+
         #endregion
 
         public static void Main(string[] args)
@@ -185,10 +190,9 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             Console.WriteLine(getRelativGyakorisagFej());
             Console.WriteLine(getRelativGyakorisagIras());
             Console.WriteLine(hanyszorSzerepeltDuplaFF());
-
+            Console.WriteLine(maximum());
 
             #endregion
-
 
             Console.ReadKey();
         }
