@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Forma1.Repository
 {
-    partial class Team : ITeam 
+    partial class Team : ITeam
     {
         private string name;
         private List<Racer> racers;
@@ -32,7 +32,7 @@ namespace Forma1.Repository
         /// Csapat törlésének előkészítése
         /// A listáből minden versenyzőt törlünk
         /// </summary>
-        public void delete()
+        public void deleteAllRacersInTeam()
         {
             racers.Clear();
         }
@@ -58,6 +58,6 @@ namespace Forma1.Repository
         public void update(string newName)
         {
             this.name = newName;
-        }        
+        }
     }
 }
