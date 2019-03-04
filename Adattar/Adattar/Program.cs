@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ListakbanLevoAdatokKezeleseOOPalapokon
 {
     public class Program
     {
+        #region 1. feladat
+
         private static List<int> szamok;
 
         private static double atlag()
@@ -39,6 +39,9 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             return result;
         }
 
+        #endregion
+
+        #region 2. feladat
 
         private static List<string> mozi;
 
@@ -78,11 +81,31 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             return counter;
         }
 
+        #endregion
+
+        #region 3. feladat
+
+        private static List<char> kiserlet;
+
+        private static int getKiserletekSzama()
+        {
+            return kiserlet.Count;
+        }
+
+        private static int getFejekSzama()
+        {
+            return kiserlet.Count(x => x == 'F');
+        }
+        private static int getIrasokSzama()
+        {
+            return kiserlet.Count(x => x == 'I');
+        }
+
+        #endregion
+
         public static void Main(string[] args)
         {
-            /*
-             * 1. feladat
-             */
+            #region 1. feladat
 
             //VeletlenEgeszSzamok veletlenEgeszSzamok = new VeletlenEgeszSzamok();
             //szamok = veletlenEgeszSzamok.getSzamok();
@@ -93,14 +116,31 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
             //Console.WriteLine($"Ennyi szám van a listában: {hanySzamVan()}");
             //Console.WriteLine($"Ennyi százalék poizítv: {Math.Round(hanySzazalekPozitiv(), 2)} %.");
 
-            /*
-             * 2. feladat
-             */
+            #endregion
 
-            MoziSzekSorok moziSzekSorok = new MoziSzekSorok();
-            mozi = moziSzekSorok.getAdatok();
-            kiírMozi();
-            Console.WriteLine(szabadSzekekSzama(3));
+            #region 2. feladat
+
+            //MoziSzekSorok moziSzekSorok = new MoziSzekSorok();
+            //mozi = moziSzekSorok.getAdatok();
+            //kiírMozi();
+            //Console.WriteLine(szabadSzekekSzama(3));
+
+            #endregion
+
+            #region 3. feladat
+
+            FejVagyIrasKiserlet fejVagyIrasKiserlet = new FejVagyIrasKiserlet();
+            kiserlet = fejVagyIrasKiserlet.getAdatok();
+
+            Console.WriteLine(getKiserletekSzama());
+            Console.WriteLine(getFejekSzama());
+            Console.WriteLine(getIrasokSzama());
+            Console.WriteLine();
+
+
+
+            #endregion
+
 
             Console.ReadKey();
         }
