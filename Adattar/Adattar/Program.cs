@@ -104,16 +104,18 @@ namespace ListakbanLevoAdatokKezeleseOOPalapokon
 
         private static double getRelativGyakorisagFej()
         {
-            double osszesDobas = kiserlet.Count;
-            double result = kiserlet.Count(x => x == 'F');
-            return result / osszesDobas * 100;
+            int osszesDobas = getKiserletekSzama();
+            int fejek = getFejekSzama();
+            double result = (double)fejek / osszesDobas * 100;
+            return Math.Round(result);
         }
 
         private static double getRelativGyakorisagIras()
         {
-            double osszesDobas = kiserlet.Count;
-            double result = kiserlet.Count(x => x == 'I');
-            return result / osszesDobas * 100;
+            int osszesDobas = getKiserletekSzama();
+            int irasok = getIrasokSzama();
+            double result = (double)irasok / osszesDobas * 100;
+            return Math.Round(result);
         }
 
         #endregion
