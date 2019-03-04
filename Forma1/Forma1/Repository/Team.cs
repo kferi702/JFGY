@@ -32,7 +32,7 @@ namespace Forma1.Repository
         /// Csapat törlésének előkészítése
         /// A listáből minden versenyzőt törlünk
         /// </summary>
-        public void deleteAllRacersInTeam()
+        public void delete()
         {
             racers.Clear();
         }
