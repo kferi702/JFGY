@@ -35,11 +35,11 @@ namespace OOPObjectInList___PekingiTorna.repository
             versenyzok.Add(new Versenyzo(171, "RYAZANOV Yury", "RUS", "Európa", 14.600, 14.450, 15.100, 15.550, 15.625, 14.800));
             versenyzok.Add(new Versenyzo(153, "KIM Soomyun", "KOR", "Ázsia", 15.575, 13.800, 14.175, 16.025, 15.350, 14.975));
             versenyzok.Add(new Versenyzo(191, "ARTEMEV Alexander", "USA", "Észak - Amerika", 14.875, 15.250, 13.675, 15.825, 15.175, 14.925));
-            versenyzok.Add(new Versenyzo(111, "GAFUIK Nathan", "CAN", "Észak-Amerika", 15.225, 13.800, 14.250, 16.175, 15.450, 14.825));
+            versenyzok.Add(new Versenyzo(111, "GAFUIK Nathan", "CAN", "Észak - Amerika", 15.225, 13.800, 14.250, 16.175, 15.450, 14.825));
             versenyzok.Add(new Versenyzo(124, "BOY Philipp", "GER", "Európa", 14.450, 14.675, 14.650, 16.200, 15.125, 14.375));
             versenyzok.Add(new Versenyzo(183, "YANG Taeyoung", "KOR", "Ázsia", 13.850, 15.000, 14.875, 16.000, 16.100, 13.475));
             versenyzok.Add(new Versenyzo(184, "FOKIN Anton", "UZB", "Ázsia", 14.325, 14.725, 14.825, 15.625, 16.150, 13.625));
-            versenyzok.Add(new Versenyzo(147, "WONG Adam", "CAN", "Észak-Amerika", 14.900, 14.375, 14.500, 15.650, 15.125, 14.575));
+            versenyzok.Add(new Versenyzo(147, "WONG Adam", "CAN", "Észak - Amerika", 14.900, 14.375, 14.500, 15.650, 15.125, 14.575));
             versenyzok.Add(new Versenyzo(180, "KEATINGS Daniel", "GBR", "Európa", 14.900, 15.175, 13.775, 15.625, 14.900, 14.575));
             versenyzok.Add(new Versenyzo(193, "POZZO Enrico", "ITA", "Európa", 14.800, 14.325, 14.250, 15.700, 14.750, 14.850));
             versenyzok.Add(new Versenyzo(121, "BOUHAIL Thomas", "FRA", "Európa", 15.125, 13.850, 13.700, 16.625, 14.675, 14.575));
