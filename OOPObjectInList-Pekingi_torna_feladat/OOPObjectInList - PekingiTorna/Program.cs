@@ -43,6 +43,21 @@ namespace OOPObjectInList___PekingiTorna
             return -1;
         }
 
+        private static List<Versenyzo> meghatarozLolengesbenNemDontosoket()
+        {
+            List<Versenyzo> lolengesbenNemDontosok = new List<Versenyzo>();
+
+            foreach (Versenyzo v in versenyzok)
+            {
+                if (v.Lolenges < v.Lolenges)
+                {
+                    lolengesbenNemDontosok.Add(v);
+                }
+            }
+
+            return lolengesbenNemDontosok;
+        }
+
         public static void Main(string[] args)
         {
             PekingiTornaszTorna ptt = new PekingiTornaszTorna();
@@ -67,6 +82,15 @@ namespace OOPObjectInList___PekingiTorna
             else
             {
                 Console.WriteLine("A " + rajtszam + " rajtszámú versenyző gyűrűn elért eredménye: " + gyuruEredmeny);
+            }
+
+            // 4. feladat
+            Console.WriteLine("Lólengésben nem jutottak döntőbe:");
+            List<Versenyzo> lolengesbenNemDontosok = meghatarozLolengesbenNemDontosoket();
+
+            foreach (Versenyzo v in lolengesbenNemDontosok)
+            {
+                Console.WriteLine(v.Nev);
             }
 
             Console.ReadKey();
