@@ -70,6 +70,23 @@ namespace OOPObjectInList___PekingiTorna
             return foldreszek;
         }
 
+        private static void kiirFoldreszenkentVersenyzokSzamot()
+        {
+            Dictionary<string, int> db = new Dictionary<string, int>();
+
+            foreach (Versenyzo v in versenyzok)
+            {
+                if (db.ContainsKey(v.Foldresz))
+                {
+                    db[v.Foldresz]++;
+                }
+                else
+                {
+                    db.Add(v.Foldresz, 1);
+                }
+            }
+        }
+
         public static void Main(string[] args)
         {
             PekingiTornaszTorna ptt = new PekingiTornaszTorna();
@@ -114,6 +131,9 @@ namespace OOPObjectInList___PekingiTorna
             {
                 Console.WriteLine(foldresz);
             }
+
+            // 6. feladat
+            kiirFoldreszenkentVersenyzokSzamot();
 
             Console.ReadKey();
         }
