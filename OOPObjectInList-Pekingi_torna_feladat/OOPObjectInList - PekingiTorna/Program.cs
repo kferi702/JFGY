@@ -58,6 +58,18 @@ namespace OOPObjectInList___PekingiTorna
             return lolengesbenNemDontosok;
         }
 
+        private static SortedSet<string> meghatarozFoldreszeket()
+        {
+            SortedSet<string> foldreszek = new SortedSet<string>();
+
+            foreach (Versenyzo v in versenyzok)
+            {
+                foldreszek.Add(v.Foldresz);
+            }
+
+            return foldreszek;
+        }
+
         public static void Main(string[] args)
         {
             PekingiTornaszTorna ptt = new PekingiTornaszTorna();
@@ -91,6 +103,16 @@ namespace OOPObjectInList___PekingiTorna
             foreach (Versenyzo v in lolengesbenNemDontosok)
             {
                 Console.WriteLine(v.Nev);
+            }
+
+            // 5. feladat
+            Console.WriteLine("A versenyen a kövezkező földrészekről volt versenyző: ");
+
+            SortedSet<string> foldreszek = meghatarozFoldreszeket();
+
+            foreach (string foldresz in foldreszek)
+            {
+                Console.WriteLine(foldresz);
             }
 
             Console.ReadKey();
