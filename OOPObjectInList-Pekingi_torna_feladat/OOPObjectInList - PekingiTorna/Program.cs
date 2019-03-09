@@ -85,6 +85,11 @@ namespace OOPObjectInList___PekingiTorna
                     db.Add(v.Foldresz, 1);
                 }
             }
+
+            foreach (KeyValuePair<string, int> foldreszDarab in db)
+            {
+                Console.WriteLine(foldreszDarab.Key + " " + foldreszDarab.Value);
+            }
         }
 
         public static void Main(string[] args)
