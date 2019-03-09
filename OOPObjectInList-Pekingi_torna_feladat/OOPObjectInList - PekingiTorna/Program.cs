@@ -49,7 +49,7 @@ namespace OOPObjectInList___PekingiTorna
 
             foreach (Versenyzo v in versenyzok)
             {
-                if (v.Lolenges < v.Lolenges)
+                if (v.Lolenges < 14.5)
                 {
                     lolengesbenNemDontosok.Add(v);
                 }
