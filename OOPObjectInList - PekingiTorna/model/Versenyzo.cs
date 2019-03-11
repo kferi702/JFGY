@@ -37,5 +37,10 @@ namespace OOPObjectInList___PekingiTorna.model
             Korlat = Convert.ToDouble(adat[8]);
             Ugras = Convert.ToDouble(adat[9]);
         }
+
+        public override string ToString()
+        {
+            return $"{Rajtszam} {Nev} {Orszag} {Foldresz} {Talaj} {Lolenges} {Gyuru} {Nyujto} {Korlat} {Ugras}";
+        }
     }
 }
