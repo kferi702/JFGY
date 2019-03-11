@@ -14,6 +14,9 @@ namespace OOPObjectInList___PekingiTorna
         {
             PekingiTornaszTornaAdatokBeolvasasaFajlbol pt = new PekingiTornaszTornaAdatokBeolvasasaFajlbol();
             pt.beolvas();
+            Console.WriteLine("9. feladat");
+            Console.WriteLine($"Legeslegjobb eredmény: {pt.getLegeslegjobbEredmeny()}");
+
 
 
             Console.ReadKey();

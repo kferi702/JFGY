@@ -33,5 +33,20 @@ namespace OOPObjectInList___PekingiTorna.repository
 
             sr.Close();
         }
+
+        public double getLegeslegjobbEredmeny()
+        {
+            double max = double.MinValue;
+
+            foreach (Versenyzo v in versenyzok)
+            {
+                if (v.getLegjobbEredmeny() > max)
+                {
+                    max = v.getLegjobbEredmeny();
+                }
+            }
+
+            return max;
+        }
     }
 }
