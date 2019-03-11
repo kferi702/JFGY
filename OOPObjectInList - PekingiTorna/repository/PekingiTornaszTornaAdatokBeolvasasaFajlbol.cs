@@ -14,12 +14,17 @@ namespace OOPObjectInList___PekingiTorna.repository
 
         public PekingiTornaszTornaAdatokBeolvasasaFajlbol()
         {
-
+            versenyzok = new List<Versenyzo>();
         }
 
         public void beolvas()
         {
             StreamReader sr = new StreamReader("torna.csv");
+
+            while (!sr.EndOfStream)
+            {
+
+            }
         }
     }
 }
