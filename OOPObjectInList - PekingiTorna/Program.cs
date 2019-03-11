@@ -14,6 +14,8 @@ namespace OOPObjectInList___PekingiTorna
         {
             PekingiTornaszTornaAdatokBeolvasasaFajlbol pt = new PekingiTornaszTornaAdatokBeolvasasaFajlbol();
             pt.beolvas();
+
+
             Console.ReadKey();
         }
     }

@@ -25,6 +25,19 @@ namespace OOPObjectInList___PekingiTorna.model
             Ugras = ugras;
         }
 
+        public double getLegjobbEredmeny()
+        {
+            List<double> eredmenyek = new List<double>();
+            eredmenyek.Add(Talaj);
+            eredmenyek.Add(Lolenges);
+            eredmenyek.Add(Gyuru);
+            eredmenyek.Add(Nyujto);
+            eredmenyek.Add(Korlat);
+            eredmenyek.Add(Ugras);
+
+            return eredmenyek.Max();
+        }
+
         public Tornasz()
         { }
     }
