@@ -48,5 +48,19 @@ namespace OOPObjectInList___PekingiTorna.repository
 
             return max;
         }
+
+        public void kiirFranciakat()
+        {
+            StreamWriter sw = new StreamWriter("franciak.txt");
+
+            foreach (Versenyzo v in versenyzok)
+            {
+                if (v.Orszag == "FRA")
+                {
+                    string sor = v.toFileLine();
+                    sw.WriteLine();
+                }
+            }
+        }
     }
 }

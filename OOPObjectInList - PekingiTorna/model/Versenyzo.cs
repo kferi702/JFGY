@@ -42,5 +42,16 @@ namespace OOPObjectInList___PekingiTorna.model
         {
             return $"{Rajtszam} {Nev} {Orszag} {Foldresz} {Talaj} {Lolenges} {Gyuru} {Nyujto} {Korlat} {Ugras}";
         }
+
+        public string toFileLine()
+        {
+            string line = $"{Rajtszam};{Nev};{getOsszpontoszam()}";
+            return line;
+        }
+
+        private string getOsszpontoszam()
+        {
+            return (Talaj + Lolenges + Gyuru + Nyujto + Korlat + Ugras).ToString();
+        }
     }
 }
