@@ -21,10 +21,16 @@ namespace OOPObjectInList___PekingiTorna.repository
         {
             StreamReader sr = new StreamReader("torna.csv");
 
+            string sor = sr.ReadLine();
+
             while (!sr.EndOfStream)
             {
+                sor = sr.ReadLine();
 
+                Versenyzo v = new Versenyzo(sor);
             }
+
+            sr.Close();
         }
     }
 }

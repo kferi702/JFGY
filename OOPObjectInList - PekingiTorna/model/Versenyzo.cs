@@ -14,12 +14,28 @@ namespace OOPObjectInList___PekingiTorna.model
         public string Foldresz { set; get; }
 
         public Versenyzo(int rajtszam, string nev, string orszag, string foldresz, double talaj, double lolenges, double gyuru, double nyujto, double korlat, double ugras)
-            :base (talaj, lolenges, gyuru, nyujto, korlat, ugras)
+            : base(talaj, lolenges, gyuru, nyujto, korlat, ugras)
         {
             Rajtszam = rajtszam;
             Nev = nev;
             Orszag = orszag;
             Foldresz = foldresz;
+        }
+
+        public Versenyzo(string sor)
+        {
+            string[] adat = sor.Split(';');
+
+            Rajtszam = Convert.ToInt32(adat[0]);
+            Nev = adat[1];
+            Orszag = adat[2];
+            Foldresz = adat[3];
+            Talaj = Convert.ToDouble(adat[4]);
+            Lolenges = Convert.ToDouble(adat[5]);
+            Gyuru = Convert.ToDouble(adat[6]);
+            Nyujto = Convert.ToDouble(adat[7]);
+            Korlat = Convert.ToDouble(adat[8]);
+            Ugras = Convert.ToDouble(adat[9]);
         }
     }
 }

@@ -24,5 +24,8 @@ namespace OOPObjectInList___PekingiTorna.model
             Korlat = korlat;
             Ugras = ugras;
         }
+
+        public Tornasz()
+        { }
     }
 }
