@@ -4,11 +4,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace OOPObjectInList___PekingiTorna.repository
 {
     public class PekingiTornaszTornaAdatokBeolvasasaFajlbol
     {
-        List<Versenyzo> versenyzok;
+        private List<Versenyzo> versenyzok;
+
+        public PekingiTornaszTornaAdatokBeolvasasaFajlbol()
+        {
+
+        }
+
+        public void beolvas()
+        {
+            StreamReader sr = new StreamReader("torna.csv");
+        }
     }
 }
