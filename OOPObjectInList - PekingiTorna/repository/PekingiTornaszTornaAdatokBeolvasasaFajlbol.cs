@@ -58,7 +58,7 @@ namespace OOPObjectInList___PekingiTorna.repository
                 if (v.Orszag == "FRA")
                 {
                     string sor = v.toFileLine();
-                    sw.WriteLine();
+                    sw.WriteLine(sor);
                 }
             }
 
