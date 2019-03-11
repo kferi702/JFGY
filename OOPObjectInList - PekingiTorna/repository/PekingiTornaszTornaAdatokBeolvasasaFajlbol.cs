@@ -61,7 +61,7 @@ namespace OOPObjectInList___PekingiTorna.repository
                     sw.WriteLine();
                 }
             }
-            
+
             sw.Close();
         }
     }
