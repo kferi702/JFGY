@@ -28,6 +28,7 @@ namespace OOPObjectInList___PekingiTorna.repository
                 sor = sr.ReadLine();
 
                 Versenyzo v = new Versenyzo(sor);
+                versenyzok.Add(v);
             }
 
             sr.Close();
