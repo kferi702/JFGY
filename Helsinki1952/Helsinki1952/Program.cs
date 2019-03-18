@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Helsinki1952.model;
+using System;
+using Helsinki1952.repository;
 
 namespace Helsinki1952
 {
@@ -10,6 +8,14 @@ namespace Helsinki1952
     {
         public static void Main(string[] args)
         {
+            Eredmenyek e = new Eredmenyek();
+            e.beolvas();
+
+            Console.WriteLine("3. feladat: ");
+            Console.Write("Pontszerző helyek száma: ");
+            Console.WriteLine(e.pontSzerzoHelyekSzama());
+
+            Console.ReadKey();
         }
     }
 }
