@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Forma1.repository
 {
@@ -18,14 +19,46 @@ namespace Forma1.repository
         public Racer(int id, string name, int age, int salary)
         {
             this.id = id;
-            this.name = name;
+
+            try
+            {
+                NameValidator validator = new NameValidator(name);
+                validator.validation();
+                this.name = name;
+            }
+            catch (NameNotValidNameIsEmptyException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+            catch (NameNotValidFirstLetterProblemException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+
             this.age = age;
             this.salary = salary;
         }
 
         public void setName(string name)
         {
-            this.name = name;
+            try
+            {
+                NameValidator validator = new NameValidator(name);
+                validator.validation();
+                this.name = name;
+            }
+            catch (NameNotValidNameIsEmptyException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+            catch (NameNotValidFirstLetterProblemException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
         }
 
         public void setAge(int age)
