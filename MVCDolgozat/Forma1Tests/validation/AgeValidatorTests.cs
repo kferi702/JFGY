@@ -21,7 +21,7 @@ namespace Forma1.validation.Tests
                 ageValidator.validation();
                 Assert.Fail("Nem dob kivételt 0 életkorra!");
             }
-            catch (AgeZeroException)
+            catch (AgeIsZeroException)
             {
             }
         }

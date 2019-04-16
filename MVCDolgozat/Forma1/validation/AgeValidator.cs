@@ -25,7 +25,7 @@ namespace Forma1.validation
         {
             if (isZero())
             {
-                throw new AgeZeroException("Életkor nem lehet nulla!");
+                throw new AgeIsZeroException("Életkor nem lehet nulla!");
             }
             if (isUnderMinAge())
             {

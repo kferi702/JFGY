@@ -1,10 +1,5 @@
 ﻿using Forma1.myexeption;
 using Forma1.validation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
 
 namespace Forma1.repository
@@ -37,8 +32,54 @@ namespace Forma1.repository
                 throw new RacerException(e.Message);
             }
 
-            this.age = age;
-            this.salary = salary;
+            try
+            {
+                AgeValidator ageValidator = new AgeValidator(age);
+                ageValidator.validation();
+                this.age = age;
+            }
+            catch (AgeIsZeroException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+            catch (AgeUnderMinimumAgeException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+            catch (AgeAboveMaximumAgeException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+
+            try
+            {
+                SalaryValidator salaryValidator = new SalaryValidator(salary);
+                salaryValidator.validation();
+                this.salary = salary;
+            }
+            catch (SalaryZeroException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+            catch (NegativeSalaryException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+            catch (HighSalaryException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+            catch (LowSalaryException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
         }
 
         public void setName(string name)
@@ -63,12 +104,57 @@ namespace Forma1.repository
 
         public void setAge(int age)
         {
-            this.age = age;
+            try
+            {
+                AgeValidator ageValidator = new AgeValidator(age);
+                ageValidator.validation();
+                this.age = age;
+            }
+            catch (AgeIsZeroException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+            catch (AgeUnderMinimumAgeException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+            catch (AgeAboveMaximumAgeException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
         }
 
         public void setSalary(int salary)
         {
-            this.salary = salary;
+            try
+            {
+                SalaryValidator salaryValidator = new SalaryValidator(salary);
+                salaryValidator.validation();
+                this.salary = salary;
+            }
+            catch (SalaryZeroException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+            catch (NegativeSalaryException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+            catch (HighSalaryException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
+            catch (LowSalaryException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new RacerException(e.Message);
+            }
         }
 
         public string getName()
