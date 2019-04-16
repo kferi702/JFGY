@@ -1,4 +1,4 @@
-﻿    using Forma1.myexeption;
+﻿using Forma1.myexeption;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ namespace Forma1.repository
         /// <returns>A versenyzők száma</returns>
         /// <exception cref="F1Exception">A csapat nem létezik, nem lehet megállapítani, hány versenyzője van.</exception>
         public int getNumberOfRacers(string teamName)
-        {         
+        {
             return 0;
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Forma1.repository
         {
             int maxId = -1;
             return maxId;
-        }        
+        }
 
         /// <summary>
         /// Az adott csapatban lévő versenyző ID-je
@@ -96,7 +96,7 @@ namespace Forma1.repository
             }
             throw new F1Exception(teamName + " nevű csapat nem létezik, nem lehet módosítani a versenyzőjének adatait.");
         }
-        
+
         /// <summary>
         /// Van-e adott versenyző
         /// </summary>
