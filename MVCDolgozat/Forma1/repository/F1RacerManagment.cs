@@ -64,15 +64,17 @@ namespace Forma1.repository
                         {
                             t.addRacer(newRacer);
                         }
-                        catch (F1Exception e)
+                        catch (TeamException e)
                         {
                             Debug.WriteLine(e.Message);
+                            throw new F1Exception(e.Message);
                         }
                     }
                 }
                 catch (F1Exception e)
                 {
                     Debug.WriteLine(e.Message);
+                    throw new F1Exception(e.Message);
                 }
             }
         }
