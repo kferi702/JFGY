@@ -131,6 +131,7 @@ namespace Forma1.repository
                 {
                     return t.getRacerId(racerName);
                 }
+                throw new F1Exception("Csapat nem létezik");
             }
             return 0;
         }
