@@ -40,7 +40,7 @@ namespace Forma1.service
             Team t = new Team(teamName);
             f1Repository.add(t);
         }
-        
+
         /// <summary>
         /// Adott nevű csapat átnevezése új csapat névre
         /// Repository segítségével a csapat régi nevének lecserélése az új névre
@@ -53,7 +53,7 @@ namespace Forma1.service
             {
                 f1Repository.update(oldTeamName, newTeamName);
             }
-            catch (F1Exception  f1e)
+            catch (F1Exception f1e)
             {
                 throw new TeamServiceExeption(f1e.Message);
             }
@@ -68,6 +68,14 @@ namespace Forma1.service
         /// <param name="teamNameToDelete"></param>
         public void deleteTeam(string teamNameToDelete)
         {
+            try
+            {
+                f1Repository.delete(teamNameToDelete);
+            }
+            catch (F1Exception e)
+            {
+                throw new TeamServiceExeption(e.Message);
+            }
         }
 
         /// <summary>
