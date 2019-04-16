@@ -86,7 +86,14 @@ namespace Forma1.repository
         /// <exception cref="F1Exception">A csapat nem létezik, nem lehet törölni a versenyzőjét</exception>
         public void deleteRacerInTeam(string teamName, string racerName, int racerAge)
         {
-
+            foreach (Team t in teams)
+            {
+                if (t.getName() == teamName)
+                {
+                    t.deleteRacer(racerName, racerAge);
+                }
+                throw new F1Exception("A csapat nem létezik, nem lehet törölni a versenyzőjét");
+            }
         }
 
         /// <summary>
