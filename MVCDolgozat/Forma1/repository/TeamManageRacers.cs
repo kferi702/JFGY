@@ -43,7 +43,7 @@ namespace Forma1.repository
                 }
                 index = index + 1;
             }
-            throw new TeamException($"{name} nincs a csapatban, ne lehet törölni!");
+            throw new TeamException("A versenyző a csapatnak nem tagja, nem lehet törlni");
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Forma1.repository
                     r.update(newRacer);
                 }
             }
-            throw new TeamException($"{name} versenyző nincs a csapatban, ezért nem lehet módosítani!");
+            throw new TeamException("A módosítandó versenyzőt nem találjuk, nem lehet módosítani");
         }
 
         /// <summary>
