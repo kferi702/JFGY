@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
+using Forma1.myexeption;
+using Forma1.validation;
 
 namespace Forma1.repository
 {
@@ -17,6 +19,24 @@ namespace Forma1.repository
         /// <param name="name">Az új csapat neve</param>
         public Team(string name)
         {
+            try
+            {
+                NameValidator validator = new NameValidator(name);
+                validator.validation();
+                this.name = name;
+            }
+            catch (NameNotValidNameIsEmptyException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new TeamException(e.Message);
+            }
+            catch (NameNotValidFirstLetterProblemException e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new TeamException(e.Message);
+            }
+
+            racers = new List<Racer>();
         }
         /// <summary>
         /// getter
