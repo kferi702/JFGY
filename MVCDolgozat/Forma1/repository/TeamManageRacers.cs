@@ -80,6 +80,13 @@ namespace Forma1.repository
         /// <returns>Ha van, akkor a versenyző, ha nincs akkor null</returns>
         public Racer serchRacerByName(string racerName)
         {
+            foreach (Racer r in racers)
+            {
+                if (r.getName() == racerName)
+                {
+                    return r;
+                }
+            }
             return null;
         }
 
@@ -91,6 +98,13 @@ namespace Forma1.repository
         /// <returns>Ha létezik, akkor true, ha nem akkor false</returns>
         public bool isRacerExist(string racerName, int racerAge)
         {
+            foreach (Racer r in racers)
+            {
+                if (r.getName() == racerName && r.getAge() == racerAge)
+                {
+                    return true;
+                }
+            }
             return false;
         }
 
