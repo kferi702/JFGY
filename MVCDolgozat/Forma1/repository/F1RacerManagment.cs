@@ -34,6 +34,13 @@ namespace Forma1.repository
         /// <returns>A versenyzők listája, ha nincs csapat akkor null</returns>
         public List<Racer> getRacersFromTheTeam(string teamName)
         {
+            foreach (Team t in teams)
+            {
+                if (t.getName() == teamName)
+                {
+                    return t.getRacers();
+                }
+            }
             return null;
         }
 
