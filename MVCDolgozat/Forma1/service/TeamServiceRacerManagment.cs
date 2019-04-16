@@ -87,6 +87,9 @@ namespace Forma1.service
         /// <param name="movedRacerName">A versenyző neve</param>
         public void moveToTeam(string fromTeamName, string toTeamName, string movedRacerName)
         {
+            Racer r = f1Repository.searchRacerByName(fromTeamName, movedRacerName);
+            f1Repository.addRacerToTeam(toTeamName, r);
+            f1Repository.deleteRacerInTeam(fromTeamName, r.getName(), r.getAge());
         }
 
         /// <summary>
