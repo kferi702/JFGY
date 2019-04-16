@@ -85,8 +85,12 @@
     <Compile Include="myexeption\AgeUnderMinimumAgeException.cs" />
     <Compile Include="validation\AgeValidator.cs" />
     <Compile Include="myexeption\AgeZeroException.cs" />
+    <Compile Include="myexeption\LowSalaryException.cs" />
     <Compile Include="validation\NameValidator.cs" />
-    <Compile Include="validation\SalaryValiator.cs" />
+    <Compile Include="myexeption\NegativeSalaryException.cs" />
+    <Compile Include="validation\SalaryValidator.cs" />
+    <Compile Include="myexeption\SalaryZeroException.cs" />
+    <Compile Include="myexeption\HighSalaryException.cs" />
     <EmbeddedResource Include="Form1Form.resx">
       <DependentUpon>Form1Form.cs</DependentUpon>
     </EmbeddedResource>
