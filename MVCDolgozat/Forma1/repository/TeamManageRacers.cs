@@ -36,7 +36,7 @@ namespace Forma1.repository
             int index = 0;
             foreach (Racer r in racers)
             {
-                if (r.getName() == name)
+                if (r.getName() == name && r.getAge() == age)
                 {
                     racers.RemoveAt(index);
                     return;
