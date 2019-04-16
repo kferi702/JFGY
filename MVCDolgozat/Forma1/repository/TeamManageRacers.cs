@@ -17,12 +17,12 @@ namespace Forma1.repository
         {
             foreach (Racer racer in racers)
             {
-                if (racer.getName() == r.getName())
+                if (racer.getName() != r.getName())
                 {
-                    throw new TeamException("Ugyanolyan név!");
+                    racers.Add(r);
                 }
-                racers.Add(r);
             }
+            throw new TeamException("Ugyanolyan név!");
         }
 
         /// <summary>
@@ -33,6 +33,17 @@ namespace Forma1.repository
         /// <exception cref="TeamException">A versenyző a csapatnak nem tagja, nem lehet törlni</exception>
         public void deleteRacer(string name, int age)
         {
+            int index = 0;
+            foreach (Racer r in racers)
+            {
+                if (r.getName() == name)
+                {
+                    racers.RemoveAt(index);
+                    return;
+                }
+                index = index + 1;
+            }
+            throw new TeamException(name + " versenyző nincs a csapatban, ezért nem lehet törölni");
         }
 
         /// <summary>
@@ -42,7 +53,15 @@ namespace Forma1.repository
         /// <param name="newRacer">A módosított versenyző adatai</param>
         /// <exception cref="">A módosítandó versenyzőt nem találjuk, nem lehet módosítani</exception>
         public void updateRacer(string name, Racer newRacer)
-        {            
+        {
+            foreach (Racer r in racers)
+            {
+                if (r.getName() == name)
+                {
+                    r.update(newRacer);
+                }
+            }
+            throw new TeamException(name + " versenyző nincs a csapatban, ezért nem lehet módosítani az adatait.");
         }
 
         /// <summary>
@@ -51,8 +70,8 @@ namespace Forma1.repository
         /// <returns>Csapatban lévő versenyzők száma</returns>
         public int getNumberOfRacers()
         {
-            return racers.Count();     
-        }       
+            return racers.Count();
+        }
 
         /// <summary>
         /// Megkeresi az adott nevű versenyzőt
@@ -74,7 +93,7 @@ namespace Forma1.repository
         {
             return false;
         }
-        
+
         /// <summary>
         /// Megadja az adott nevű versenyző azonosítóját
         /// </summary>
