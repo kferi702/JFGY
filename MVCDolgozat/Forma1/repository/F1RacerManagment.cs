@@ -17,6 +17,14 @@ namespace Forma1.repository
         /// <exception cref="F1Exception">A csapat nem létezik, nem lehet megállapítani, hány versenyzője van.</exception>
         public int getNumberOfRacers(string teamName)
         {
+            foreach (Team t in teams)
+            {
+                if (t.getName() == teamName)
+                {
+                    return t.getRacers().Count;
+                }
+                throw new F1Exception("A csapat nem létezik, nem lehet megállapítani, hány versenyzője van.");
+            }
             return 0;
         }
         /// <summary>
