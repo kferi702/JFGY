@@ -8,7 +8,7 @@ using Forma1.validation;
 
 namespace Forma1.repository
 {
-    partial class Team : ITeam
+    partial class Team : ITeam, ITeamSalary
     {
         private string name;
         private List<Racer> racers;
@@ -60,7 +60,7 @@ namespace Forma1.repository
         /// <param name="newName">Csapat új neve</param>
         public void update(string newName)
         {
-
+            name = newName;
         }
         /// <summary>
         /// A csapat versenyzőinek listáját adja vissza
@@ -68,7 +68,18 @@ namespace Forma1.repository
         /// <returns>A versenyzők neveinek listája</returns>
         public List<Racer> getRacers()
         {
-            return null;
+            return racers;
+        }
+
+        public int getTeamSalary()
+        {
+            int salary = 0;
+            foreach (Racer r in racers)
+            {
+                salary += r.getSalary();
+            }
+
+            return salary;
         }
     }
 }
