@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace Forma1.repository
@@ -15,6 +15,14 @@ namespace Forma1.repository
         /// <exception cref="TeamException">Két úgyan olyan versenyző nem lehet</exception>
         public void addRacer(Racer r)
         {
+            foreach (Racer racer in racers)
+            {
+                if (racer.getName() == r.getName())
+                {
+                    throw new TeamException("Ugyanolyan név!");
+                }
+                racers.Add(r);
+            }
         }
 
         /// <summary>
