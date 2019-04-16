@@ -16,6 +16,7 @@ namespace Forma1.validation
         public AgeValidator(int age)
         {
             this.age = age;
+
             minAge = 18;
             maxAge = 50;
         }
@@ -38,22 +39,17 @@ namespace Forma1.validation
 
         private bool isAboveMaxAge()
         {
-            return false;
+            return age > maxAge ? true : false;
         }
 
         private bool isUnderMinAge()
         {
-            return false;
+            return age < minAge ? true : false;
         }
 
         private bool isZero()
         {
-            if (age == 0)
-            {
-                return true;
-            }
-
-            return false;
+            return age == 0 ? true : false;
         }
     }
 }
