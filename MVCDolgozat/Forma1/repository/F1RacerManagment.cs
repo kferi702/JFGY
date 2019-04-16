@@ -1,7 +1,7 @@
 ﻿using Forma1.myexeption;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -54,6 +54,27 @@ namespace Forma1.repository
         /// <exception cref="F1Exception">A csapat nem létezik (loggolni is)</exception>
         public void addRacerToTeam(string teamName, Racer newRacer)
         {
+            foreach (Team t in teams)
+            {
+                try
+                {
+                    if (t.getName() == teamName)
+                    {
+                        try
+                        {
+                            t.addRacer(newRacer);
+                        }
+                        catch (F1Exception e)
+                        {
+                            Debug.WriteLine(e.Message);
+                        }
+                    }
+                }
+                catch (F1Exception e)
+                {
+                    Debug.WriteLine(e.Message);
+                }
+            }
         }
 
         /// <summary>
@@ -65,6 +86,7 @@ namespace Forma1.repository
         /// <exception cref="F1Exception">A csapat nem létezik, nem lehet törölni a versenyzőjét</exception>
         public void deleteRacerInTeam(string teamName, string racerName, int racerAge)
         {
+
         }
 
         /// <summary>
