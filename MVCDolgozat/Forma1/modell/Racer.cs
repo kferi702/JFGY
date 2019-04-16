@@ -15,8 +15,8 @@ namespace Forma1.repository
         private int age;
         private int salary;
 
-        public Racer(int id, string name, int age,int salary)
-        {            
+        public Racer(int id, string name, int age, int salary)
+        {
             this.id = id;
             this.name = name;
             this.age = age;
@@ -59,7 +59,16 @@ namespace Forma1.repository
         }
 
         public void update(Racer racer)
-        {            
+        {
+            id = racer.getId();
+            name = racer.getName();
+            age = racer.getAge();
+            salary = racer.getSalary();
+        }
+
+        public override string ToString()
+        {
+            return $"{id} {name} {age} {salary}";
         }
     }
 }
