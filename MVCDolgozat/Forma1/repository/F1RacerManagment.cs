@@ -107,6 +107,12 @@ namespace Forma1.repository
         public int getNextRacerId()
         {
             int maxId = -1;
+
+            foreach (Team t in teams)
+            {
+                return t.getMaxId();
+            }
+
             return maxId;
         }
 
