@@ -17,12 +17,12 @@ namespace Forma1.repository
         {
             foreach (Racer racer in racers)
             {
-                if (racer.getName() != r.getName())
+                if (racer.getName() == r.getName())
                 {
                     racers.Add(r);
                 }
             }
-            throw new TeamException("Ugyanolyan név!");
+            throw new TeamException("Két úgyan olyan versenyző nem lehet");
         }
 
         /// <summary>
