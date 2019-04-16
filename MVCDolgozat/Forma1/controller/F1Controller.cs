@@ -68,6 +68,16 @@ namespace Forma1.controller
         /// <param name="teamName">A csapat</param>
         public void addTeamToF1(string teamName)
         {
+            try
+            {
+                NameValidator nameValidator = new NameValidator(teamName);
+                nameValidator.validation();
+                teamService.addTeam(teamName);
+            }
+            catch (Exception e)
+            {
+                throw new ControllerException(e.Message);
+            }
         }
 
         /// <summary>
