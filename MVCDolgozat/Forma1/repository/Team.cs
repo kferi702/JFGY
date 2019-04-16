@@ -52,15 +52,15 @@ namespace Forma1.repository
         /// </summary>
         public void deleteAllRacersInTeam()
         {
-            
-        }        
+            racers.Clear();
+        }
         /// <summary>
         /// Módosítja a csapat nevét
         /// </summary>
         /// <param name="newName">Csapat új neve</param>
         public void update(string newName)
         {
-            
+
         }
         /// <summary>
         /// A csapat versenyzőinek listáját adja vissza
