@@ -36,7 +36,7 @@ namespace Forma1.controller
         {
             List<string> teamNames = new List<string>();
             List<Team> teams = teamService.getTeams();
-            foreach(Team t in teams)
+            foreach (Team t in teams)
             {
                 teamNames.Add(t.getName());
             }
@@ -52,9 +52,9 @@ namespace Forma1.controller
         {
             List<string> teamNames = new List<string>();
             List<Team> teams = teamService.getTeams();
-            foreach(Team t in teams)
+            foreach (Team t in teams)
             {
-                if (t.getName()!=teamName)
+                if (t.getName() != teamName)
                     teamNames.Add(t.getName());
             }
             return teamNames;
@@ -91,8 +91,26 @@ namespace Forma1.controller
         /// <param name="newTeamName">A csoport új neve</param>
         public void modifyTeamName(string oldTeamName, string newTeamName)
         {
-            
-        }      
+            if (!teamService.existTeamName(newTeamName))
+            {
+                throw new ControllerException("Létező csapatnév!");
+            }
+
+            try
+            {
+                NameValidator nameValidator = new NameValidator(newTeamName);
+                nameValidator.validation();
+                teamService.modifyTeamName(oldTeamName, newTeamName);
+            }
+            catch (NameNotValidNameIsEmptyException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (NameNotValidFirstLetterProblemException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+        }
 
         /// <summary>
         /// Adott nevű csapat törlése
