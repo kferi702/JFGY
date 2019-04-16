@@ -158,6 +158,16 @@ namespace Forma1.repository
         /// <returns>true ha van és false ha nincs</returns>
         public bool existRacer(string racerName, int racerAge)
         {
+            foreach (Team t in teams)
+            {
+                foreach (Racer r in t.getRacers())
+                {
+                    if (r.getName() == racerName)
+                    {
+                        return true;
+                    }
+                }
+            }
             return false;
         }
 
