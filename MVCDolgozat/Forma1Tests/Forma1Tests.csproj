@@ -56,8 +56,8 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Forma1FormTeamManagment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="validation\AgeValidatorTests.cs" />
     <Compile Include="validation\NameValidatorTests.cs" />
   </ItemGroup>
   <ItemGroup>

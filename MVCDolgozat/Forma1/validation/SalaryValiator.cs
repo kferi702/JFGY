@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Forma1Tests
+namespace Forma1.validation
 {
-    class Forma1FormTeamManagment
+    class SalaryValiator
     {
     }
 }

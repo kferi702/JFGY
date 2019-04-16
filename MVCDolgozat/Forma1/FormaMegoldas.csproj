@@ -81,7 +81,12 @@
     <Compile Include="repository\TestData.cs" />
     <Compile Include="service\TeamService.cs" />
     <Compile Include="service\TeamServiceRacerManagment.cs" />
+    <Compile Include="myexeption\AgeAboveMaximumAgeException.cs" />
+    <Compile Include="myexeption\AgeUnderMinimumAgeException.cs" />
+    <Compile Include="validation\AgeValidator.cs" />
+    <Compile Include="myexeption\AgeZeroException.cs" />
     <Compile Include="validation\NameValidator.cs" />
+    <Compile Include="validation\SalaryValiator.cs" />
     <EmbeddedResource Include="Form1Form.resx">
       <DependentUpon>Form1Form.cs</DependentUpon>
     </EmbeddedResource>
