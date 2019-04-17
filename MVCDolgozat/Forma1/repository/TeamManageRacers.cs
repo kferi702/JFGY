@@ -21,8 +21,8 @@ namespace Forma1.repository
                 {
                     racers.Add(r);
                 }
+                throw new TeamException("Két úgyan olyan versenyző nem lehet");
             }
-            throw new TeamException("Két úgyan olyan versenyző nem lehet");
         }
 
         /// <summary>
