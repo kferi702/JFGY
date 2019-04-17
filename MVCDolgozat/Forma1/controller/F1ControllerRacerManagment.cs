@@ -1,10 +1,7 @@
 ﻿using Forma1.myexeption;
 using Forma1.repository;
-using System;
+using Forma1.validation;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Forma1.controller
 {
@@ -25,6 +22,71 @@ namespace Forma1.controller
         /// <param name="racerSalary">A versenyző bérköltsége</param>
         public void addRacerToTeam(string teamName, string racerName, string racerAge, string racerSalary)
         {
+            if (!int.TryParse(racerAge, out int racerAgeNumber))
+            {
+                throw new ControllerException("Életkor nem megfelelő formátumú!");
+            }
+
+            if (!int.TryParse(racerSalary, out int racerSalaryNumber))
+            {
+                throw new ControllerException("Fizetés nem megfelelő formátumú!");
+            }
+
+            try
+            {
+                NameValidator nv = new NameValidator(racerName);
+                nv.validation();
+            }
+            catch (NameNotValidNameIsEmptyException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (NameNotValidFirstLetterProblemException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+
+            try
+            {
+                AgeValidator av = new AgeValidator(racerAgeNumber);
+                av.validation();
+            }
+            catch (AgeIsZeroException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (AgeUnderMinimumAgeException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (AgeAboveMaximumAgeException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+
+            try
+            {
+                SalaryValidator sv = new SalaryValidator(racerSalaryNumber);
+                sv.validation();
+            }
+            catch (SalaryZeroException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (NegativeSalaryException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (HighSalaryException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (LowSalaryException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+
+            //  teamService.addReacerToTeam();
         }
 
         /// <summary>
