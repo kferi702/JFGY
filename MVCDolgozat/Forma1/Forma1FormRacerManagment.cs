@@ -48,7 +48,8 @@ namespace Forma1
 
             controller.addRacerToTeam(teamName, racerName, racerAge, racerSalary);
 
-
+            listBoxRacer.DataSource = null;
+            listBoxRacer.DataSource = controller.getTeamRacersName(teamName);
         }
 
         /// <summary>
