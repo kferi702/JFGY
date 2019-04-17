@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Diagnostics;
 using Forma1.controller;
 using Forma1.myexeption;
 
@@ -24,7 +24,14 @@ namespace Forma1
 
         private void buttonInitializeData_Click(object sender, EventArgs e)
         {
-            controller.initializeTestData();
+            try
+            {
+                controller.initializeTestData();
+            }
+            catch (ControllerException ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
             listBoxTeam.DataSource = controller.getTeamNames();
         }
 

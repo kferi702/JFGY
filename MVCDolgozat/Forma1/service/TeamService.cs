@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +28,14 @@ namespace Forma1.service
         /// </summary>
         public void provideTestData()
         {
-            f1Repository = testData.getTestData();
+            try
+            {
+                f1Repository = testData.getTestData();
+            }
+            catch (System.Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
         }
 
         /// <summary>

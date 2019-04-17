@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,7 +25,14 @@ namespace Forma1.controller
         /// </summary>
         public void initializeTestData()
         {
-            teamService.provideTestData();
+            try
+            {
+                teamService.provideTestData();
+            }
+            catch (TeamServiceExeption e)
+            {
+                Debug.WriteLine(e.Message);
+            }
         }
 
         /// <summary>
