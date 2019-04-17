@@ -86,13 +86,13 @@ namespace Forma1.controller
                 throw new ControllerException(e.Message);
             }
 
-            Racer test = new Racer(0, racerName, racerAgeNumber, 1);
+            Racer providedRacer = new Racer(0, racerName, racerAgeNumber, 1);
 
-            var r = teamService.getRacerFromTheTeam(teamName).Contains(test);
+            var existingInTeam = teamService.getRacerFromTheTeam(teamName).Contains(providedRacer);
 
-            if (r)
+            if (existingInTeam)
             {
-                throw new ControllerException("Nem tagja a csapatnak a versenyző");
+                throw new ControllerException("Már tagja a csapatnak a versenyző!");
             }
 
             int id = teamService.getNextRacerId();
