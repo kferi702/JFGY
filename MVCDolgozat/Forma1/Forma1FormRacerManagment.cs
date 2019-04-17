@@ -22,7 +22,13 @@ namespace Forma1
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void listBoxRacer_SelectedIndexChanged(object sender, EventArgs e)
-        {         
+        {
+            if (listBoxRacer.SelectedIndex<0)
+            {
+                return;
+            }
+
+
         }
 
         /// <summary>
