@@ -15,32 +15,14 @@ namespace Forma1.repository
             Racer r4 = new Racer(4, "Vettel", 31, 182);
             Racer r5 = new Racer(5, "Verstappen", 21, 70);
 
-            Racer r6 = null;
-            try
-            {
-                r6 = new Racer(5, "fittipaldi", 88, 70);
-            }
-            catch (RacerException e)
-            {
-                Debug.WriteLine(e.Message);
-            }
-
+            Racer r6 = new Racer(5, "fittipaldi", 88, 70);
             Racer r7 = new Racer(5, "Verstappen", 21, 70);
             Racer r8 = new Racer(5, "Csaba", 78, 10);
 
             Team t1 = new Team("Mc Laren");
             Team t2 = new Team("Ferrari");
 
-            Team t3 = null;
-
-            try
-            {
-                t3 = new Team("trabant");
-            }
-            catch (TeamException e)
-            {
-                Debug.WriteLine(e.Message);
-            }
+            Team t3 = new Team("trabant");
 
             t1.addRacer(r1);
             t1.addRacer(r3);
