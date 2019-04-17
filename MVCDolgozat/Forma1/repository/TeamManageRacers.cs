@@ -15,6 +15,11 @@ namespace Forma1.repository
         /// <exception cref="TeamException">Két úgyan olyan versenyző nem lehet</exception>
         public void addRacer(Racer r)
         {
+            if (r == null)
+            {
+                return;
+            }
+
             if (!racers.Contains(r))
             {
                 racers.Add(r);
