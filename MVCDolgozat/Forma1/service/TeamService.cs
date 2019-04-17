@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Forma1.myexeption;
 using Forma1.repository;
+using System;
 
 namespace Forma1.service
 {
@@ -98,6 +99,16 @@ namespace Forma1.service
                 return true;
             else
                 return false;
-        }       
-     }
+        }
+
+        public int getF1Salary()
+        {
+            return f1Repository.getF1Salary();
+        }
+
+        public int getTeamSalary(string teamName)
+        {
+            return f1Repository.getTeamSalary(teamName);
+        }
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using Forma1.myexeption;
 using Forma1.repository;
 using Forma1.validation;
+using System;
 using System.Collections.Generic;
 
 namespace Forma1.controller
@@ -143,6 +144,11 @@ namespace Forma1.controller
             {
                 throw new ControllerException(e.Message);
             }
+        }
+
+        public string getTeamSalary(string teamName)
+        {
+            return teamService.getTeamSalary(teamName).ToString();
         }
 
         /// <summary>
@@ -295,6 +301,11 @@ namespace Forma1.controller
             if (teamService.existTeamName(teamName))
                 return teamService.searchRacerByName(teamName, racerName);
             return null;
+        }
+
+        public string getF1Salary()
+        {
+            return teamService.getF1Salary().ToString();
         }
     }
 }
