@@ -86,12 +86,14 @@ namespace Forma1.controller
                 throw new ControllerException(e.Message);
             }
 
+            if (!teamService.existRacer(racerName, racerAgeNumber))
+            {
+                throw new ControllerException("");
+            }
 
-
-            //Ide a validált adatok
-            Racer racer = new Racer(1, "", 1, 1);
-
-            teamService.addReacerToTeam(teamName, racer);
+            int id = teamService.getNextRacerId();
+            Racer r = new Racer(id, racerName, racerAgeNumber, racerSalaryNumber);
+            teamService.addReacerToTeam(teamName, r);
         }
 
         /// <summary>
