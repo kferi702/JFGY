@@ -172,6 +172,61 @@ namespace Forma1.controller
                 throw new ControllerException("A megadott fizetés nem megfelelő alakú szám!");
             if (teamService.existRacer(racerName, racerAgeNumber))
                 throw new ControllerException("Már létezik " + racerName + " nevű versenyző, aki " + racerAge + " éves.");
+
+            try
+            {
+                NameValidator nv = new NameValidator(racerName);
+                nv.validation();
+            }
+            catch (NameNotValidNameIsEmptyException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (NameNotValidFirstLetterProblemException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+
+            try
+            {
+                AgeValidator av = new AgeValidator(racerAgeNumber);
+                av.validation();
+            }
+            catch (AgeIsZeroException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (AgeUnderMinimumAgeException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (AgeAboveMaximumAgeException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+
+            try
+            {
+                SalaryValidator sv = new SalaryValidator(racerSalaryNumber);
+                sv.validation();
+            }
+            catch (SalaryZeroException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (NegativeSalaryException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (HighSalaryException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (LowSalaryException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+
             try
             {
                 int racerId = teamService.getRacerId(teamName, oldRacerName);
