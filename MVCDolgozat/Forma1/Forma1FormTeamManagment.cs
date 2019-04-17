@@ -30,6 +30,8 @@ namespace Forma1
 
             //Ide írja a kifejlesztendő kód folytatását! A null nem jó!
             List<string> racerNames = controller.getTeamRacersName(teamName);
+            listBoxRacer.DataSource = null;
+            listBoxRacer.DataSource = racerNames;
 
 
             if (racerNames.Count > 0)
