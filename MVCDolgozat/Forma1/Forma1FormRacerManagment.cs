@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Forma1.controller;
@@ -46,6 +41,12 @@ namespace Forma1
                 return;
 
             string teamName = listBoxTeam.SelectedItem.ToString();
+
+            string racerName = textBoxRacerName.Text;
+            string racerAge = textBoxRacerAge.Text;
+            string racerSalary = textBoxRacerSalary.Text;
+
+            controller.addRacerToTeam(teamName, racerName, racerAge, racerSalary);
 
 
         }
