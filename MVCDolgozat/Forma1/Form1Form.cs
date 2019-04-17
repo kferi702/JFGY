@@ -24,14 +24,7 @@ namespace Forma1
 
         private void buttonInitializeData_Click(object sender, EventArgs e)
         {
-            try
-            {
-                controller.initializeTestData();
-            }
-            catch (ControllerException ex)
-            {
-                Debug.WriteLine(ex.Message);
-            }
+            controller.initializeTestData();
             listBoxTeam.DataSource = controller.getTeamNames();
         }
 

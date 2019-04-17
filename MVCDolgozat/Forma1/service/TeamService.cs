@@ -28,14 +28,8 @@ namespace Forma1.service
         /// </summary>
         public void provideTestData()
         {
-            try
-            {
-                f1Repository = testData.getTestData();
-            }
-            catch (System.Exception e)
-            {
-                Debug.WriteLine(e.Message);
-            }
+
+            f1Repository = testData.getTestData();
         }
 
         /// <summary>

@@ -25,14 +25,7 @@ namespace Forma1.controller
         /// </summary>
         public void initializeTestData()
         {
-            try
-            {
-                teamService.provideTestData();
-            }
-            catch (TeamServiceExeption e)
-            {
-                Debug.WriteLine(e.Message);
-            }
+            teamService.provideTestData();
         }
 
         /// <summary>
