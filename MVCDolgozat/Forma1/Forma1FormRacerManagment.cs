@@ -23,12 +23,19 @@ namespace Forma1
         /// <param name="e"></param>
         private void listBoxRacer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBoxRacer.SelectedIndex<0)
+            if (listBoxRacer.SelectedIndex < 0 && listBoxTeam.SelectedIndex < 0)
             {
                 return;
             }
 
+            string team = listBoxTeam.SelectedItem.ToString();
+            string name = listBoxRacer.SelectedItem.ToString();
+            string age = controller.getRacerAge(name);
+            string salary = controller.getSalary(name);
 
+            textBoxRacerName.Text = name;
+            textBoxRacerAge.Text = age;
+            textBoxRacerSalary.Text = salary;
         }
 
         /// <summary>
