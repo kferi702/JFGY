@@ -86,14 +86,18 @@ namespace Forma1.controller
                 throw new ControllerException(e.Message);
             }
 
-            if (!teamService.existRacer(racerName, racerAgeNumber))
+            Racer test = new Racer(0, racerName, racerAgeNumber, 1);
+
+            var r = teamService.getRacerFromTheTeam(teamName).Contains(test);
+
+            if (!r)
             {
-                throw new ControllerException("");
+                throw new ControllerException("Nem tagja a csapatnak a versenyző");
             }
 
             int id = teamService.getNextRacerId();
-            Racer r = new Racer(id, racerName, racerAgeNumber, racerSalaryNumber);
-            teamService.addReacerToTeam(teamName, r);
+            Racer newRacer = new Racer(id, racerName, racerAgeNumber, racerSalaryNumber);
+            teamService.addReacerToTeam(teamName, newRacer);
         }
 
         /// <summary>
