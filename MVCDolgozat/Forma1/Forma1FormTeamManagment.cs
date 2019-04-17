@@ -59,6 +59,9 @@ namespace Forma1
             try
             {
                 // Ide írja a kódot
+                controller.addTeamToF1(teamName);
+                listBoxTeam.DataSource = null;
+                listBoxTeam.DataSource = controller.getTeamNames();
             }
             catch (ControllerException ce)
             {
