@@ -90,7 +90,7 @@ namespace Forma1.controller
 
             var r = teamService.getRacerFromTheTeam(teamName).Contains(test);
 
-            if (!r)
+            if (r)
             {
                 throw new ControllerException("Nem tagja a csapatnak a versenyző");
             }
