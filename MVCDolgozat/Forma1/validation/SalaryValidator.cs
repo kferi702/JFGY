@@ -7,13 +7,11 @@ namespace Forma1.validation
     {
         private readonly int salary;
         private readonly int maxSalary;
-        private readonly int minSalary;
 
         public SalaryValidator(int salary)
         {
             this.salary = salary;
             maxSalary = 1000000;
-            minSalary = 100000;
         }
 
         public void validation()
@@ -32,16 +30,6 @@ namespace Forma1.validation
             {
                 throw new HighSalaryException();
             }
-
-            if (SalaryIsUnderMin())
-            {
-                throw new LowSalaryException();
-            }
-        }
-
-        private bool SalaryIsUnderMin()
-        {
-            return salary < minSalary ? true : false;
         }
 
         private bool SalaryIsAboveMax()

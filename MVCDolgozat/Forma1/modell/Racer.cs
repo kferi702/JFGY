@@ -75,11 +75,6 @@ namespace Forma1.repository
                 Debug.WriteLine(e.Message);
                 throw new RacerException(e.Message);
             }
-            catch (LowSalaryException e)
-            {
-                Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
-            }
         }
 
         public void setName(string name)
@@ -146,11 +141,6 @@ namespace Forma1.repository
                 throw new RacerException(e.Message);
             }
             catch (HighSalaryException e)
-            {
-                Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
-            }
-            catch (LowSalaryException e)
             {
                 Debug.WriteLine(e.Message);
                 throw new RacerException(e.Message);

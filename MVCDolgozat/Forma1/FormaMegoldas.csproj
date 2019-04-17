@@ -85,7 +85,6 @@
     <Compile Include="myexeption\AgeUnderMinimumAgeException.cs" />
     <Compile Include="validation\AgeValidator.cs" />
     <Compile Include="myexeption\AgeIsZeroException.cs" />
-    <Compile Include="myexeption\LowSalaryException.cs" />
     <Compile Include="validation\NameValidator.cs" />
     <Compile Include="myexeption\NegativeSalaryException.cs" />
     <Compile Include="validation\SalaryValidator.cs" />

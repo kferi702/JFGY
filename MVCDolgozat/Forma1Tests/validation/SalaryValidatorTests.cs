@@ -47,17 +47,5 @@ namespace Forma1.validation.Tests
             }
             catch (HighSalaryException) { }
         }
-
-        [TestMethod()]
-        public void validationTest_InCaseSalaryIsLow()
-        {
-            try
-            {
-                SalaryValidator salaryValidator = new SalaryValidator(343);
-                salaryValidator.validation();
-                Assert.Fail("Nem dob kivételt alacsony fizetésre!");
-            }
-            catch (LowSalaryException) { }
-        }
     }
 }

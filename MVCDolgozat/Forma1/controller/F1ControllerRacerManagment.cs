@@ -81,10 +81,6 @@ namespace Forma1.controller
             {
                 throw new ControllerException(e.Message);
             }
-            catch (LowSalaryException e)
-            {
-                throw new ControllerException(e.Message);
-            }
 
             Racer providedRacer = new Racer(0, racerName, racerAgeNumber, 1);
 
@@ -127,10 +123,6 @@ namespace Forma1.controller
                 throw new ControllerException(e.Message);
             }
             catch (NegativeSalaryException e)
-            {
-                throw new ControllerException(e.Message);
-            }
-            catch (LowSalaryException e)
             {
                 throw new ControllerException(e.Message);
             }
@@ -219,10 +211,6 @@ namespace Forma1.controller
                 throw new ControllerException(e.Message);
             }
             catch (HighSalaryException e)
-            {
-                throw new ControllerException(e.Message);
-            }
-            catch (LowSalaryException e)
             {
                 throw new ControllerException(e.Message);
             }

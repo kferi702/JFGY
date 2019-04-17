@@ -39,7 +39,15 @@ namespace Forma1
         /// Ha hibát kap el hozzáadás során, jelenítse meg az error provider segítségével
         /// </summary>
         private void buttonAddRacer_Click(object sender, EventArgs e)
-        {         
+        {
+            errorProviderAddRacer.Clear();
+
+            if (listBoxTeam.SelectedIndex < 0)
+                return;
+
+            string teamName = listBoxTeam.SelectedItem.ToString();
+
+
         }
 
         /// <summary>
@@ -48,8 +56,8 @@ namespace Forma1
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void buttonUpdateRacer_Click(object sender, EventArgs e)
-        {          
-            if (listBoxTeam.SelectedIndex < 0 || listBoxRacer.SelectedIndex<0)
+        {
+            if (listBoxTeam.SelectedIndex < 0 || listBoxRacer.SelectedIndex < 0)
                 return;
             string teamName = listBoxTeam.SelectedItem.ToString();
             string racerToModify = listBoxRacer.SelectedItem.ToString();
@@ -63,7 +71,7 @@ namespace Forma1
                 listBoxRacer.DataSource = controller.getTeamRacersName(teamName);
             }
             catch (ControllerException ce)
-            {                
+            {
             }
         }
 
