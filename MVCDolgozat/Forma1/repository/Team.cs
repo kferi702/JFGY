@@ -28,12 +28,12 @@ namespace Forma1.repository
             catch (NameNotValidNameIsEmptyException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new TeamException(e.Message);
+                throw new TeamException(e.Message + "\n" + name);
             }
             catch (NameNotValidFirstLetterProblemException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new TeamException(e.Message);
+                throw new TeamException(e.Message + "\n" + name);
             }
 
             racers = new List<Racer>();

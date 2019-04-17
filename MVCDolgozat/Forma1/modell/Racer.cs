@@ -24,12 +24,12 @@ namespace Forma1.repository
             catch (NameNotValidNameIsEmptyException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + name);
             }
             catch (NameNotValidFirstLetterProblemException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + name);
             }
 
             try
@@ -41,17 +41,17 @@ namespace Forma1.repository
             catch (AgeIsZeroException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + age);
             }
             catch (AgeUnderMinimumAgeException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + age);
             }
             catch (AgeAboveMaximumAgeException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + age);
             }
 
             try
@@ -63,17 +63,17 @@ namespace Forma1.repository
             catch (SalaryZeroException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + salary);
             }
             catch (NegativeSalaryException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + salary);
             }
             catch (HighSalaryException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + salary);
             }
         }
 
@@ -88,12 +88,12 @@ namespace Forma1.repository
             catch (NameNotValidNameIsEmptyException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + name);
             }
             catch (NameNotValidFirstLetterProblemException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + name);
             }
         }
 
@@ -108,17 +108,17 @@ namespace Forma1.repository
             catch (AgeIsZeroException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + age);
             }
             catch (AgeUnderMinimumAgeException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + age);
             }
             catch (AgeAboveMaximumAgeException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + age);
             }
         }
 
@@ -133,17 +133,17 @@ namespace Forma1.repository
             catch (SalaryZeroException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + salary);
             }
             catch (NegativeSalaryException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + salary);
             }
             catch (HighSalaryException e)
             {
                 Debug.WriteLine(e.Message);
-                throw new RacerException(e.Message);
+                throw new RacerException(e.Message + "\n" + salary);
             }
         }
 
