@@ -86,7 +86,12 @@ namespace Forma1.controller
                 throw new ControllerException(e.Message);
             }
 
-            //  teamService.addReacerToTeam();
+
+
+            //Ide a validált adatok
+            Racer racer = new Racer(1, "", 1, 1);
+
+            teamService.addReacerToTeam(teamName, racer);
         }
 
         /// <summary>
