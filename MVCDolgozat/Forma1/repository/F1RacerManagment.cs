@@ -193,7 +193,7 @@ namespace Forma1.repository
                     }
                 }
             }
-            throw new Exception("Az adott nevű csapat nem létezik.");
+            throw new F1Exception("Az adott nevű csapat nem létezik.");
         }
     }
 }
