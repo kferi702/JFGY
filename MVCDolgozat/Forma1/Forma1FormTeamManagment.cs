@@ -27,9 +27,9 @@ namespace Forma1
                 return;
             }
             string teamName = listBoxTeam.SelectedItem.ToString();
-            //Ide írja a kifejlesztendő kód folytatását! A null nem jó!
 
-            List<string> racerNames = null;
+            //Ide írja a kifejlesztendő kód folytatását! A null nem jó!
+            List<string> racerNames = controller.getTeamRacersName(teamName);
 
 
             if (racerNames.Count > 0)
@@ -91,10 +91,10 @@ namespace Forma1
                 controller.deleteTeam(teamNameToDelete);
                 listBoxTeam.DataSource = null;
                 listBoxTeam.DataSource = controller.getTeamNames();
-                if (listBoxTeam.SelectedIndex>=0)
+                if (listBoxTeam.SelectedIndex >= 0)
                 {
                     string teamName = listBoxTeam.SelectedItem.ToString();
-                    List<string> teamsExcludeSelected= controller.getTeamNameListExclude(teamName);
+                    List<string> teamsExcludeSelected = controller.getTeamNameListExclude(teamName);
                     if (teamsExcludeSelected.Count > 0)
                         comboBoxTeamMove.DataSource = teamsExcludeSelected;
                     else
@@ -108,5 +108,5 @@ namespace Forma1
                 errorProviderUpdateTeam.SetError(buttonDeleteTeam, ce.Message);
             }
         }
-     }
+    }
 }
