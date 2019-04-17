@@ -98,6 +98,38 @@ namespace Forma1.repository
             }
         }
 
+        public int getRacerSalary(string name)
+        {
+            foreach (Team t in teams)
+            {
+                foreach (Racer r in t.getRacers())
+                {
+                    if (r.getName() == name)
+                    {
+                        return r.getSalary();
+                    }
+                }
+
+            }
+            return 0;
+        }
+
+        public int getRacerAge(string name)
+        {
+            foreach (Team t in teams)
+            {
+                foreach (Racer r in t.getRacers())
+                {
+                    if (r.getName() == name)
+                    {
+                        return r.getAge();
+                    }
+                }
+
+            }
+            return 0;
+        }
+
         /// <summary>
         /// Átnézi az összes csapat összes versenyzőjét és megállapítja a
         /// jelenlegi legnagyobb Racer ID-t. Eggyel nagyobbat ad vissza
@@ -146,8 +178,8 @@ namespace Forma1.repository
                     t.updateRacer(oldRacerName, newRacer);
                     return;
                 }
+                throw new F1Exception(teamName + " nevű csapat nem létezik, nem lehet módosítani a versenyzőjének adatait.");
             }
-            throw new F1Exception(teamName + " nevű csapat nem létezik, nem lehet módosítani a versenyzőjének adatait.");
         }
 
         /// <summary>

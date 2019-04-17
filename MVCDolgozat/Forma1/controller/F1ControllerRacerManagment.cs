@@ -146,6 +146,16 @@ namespace Forma1.controller
             }
         }
 
+        public string getSalary(string name)
+        {
+            return teamService.getRacerSalary(name).ToString();
+        }
+
+        public string getRacerAge(string name)
+        {
+            return teamService.getRacerAge(name).ToString();
+        }
+
         public string getTeamSalary(string teamName)
         {
             return teamService.getTeamSalary(teamName).ToString();

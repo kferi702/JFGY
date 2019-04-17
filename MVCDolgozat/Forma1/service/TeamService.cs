@@ -110,5 +110,15 @@ namespace Forma1.service
         {
             return f1Repository.getTeamSalary(teamName);
         }
+
+        public int getRacerAge(string name)
+        {
+            return f1Repository.getRacerAge(name);
+        }
+
+        public int getRacerSalary(string name)
+        {
+            return f1Repository.getRacerSalary(name);
+        }
     }
 }
