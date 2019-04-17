@@ -96,8 +96,61 @@ namespace Forma1.controller
             }
 
             int id = teamService.getNextRacerId();
-            Racer newRacer = new Racer(id, racerName, racerAgeNumber, racerSalaryNumber);
-            teamService.addReacerToTeam(teamName, newRacer);
+            Racer newRacer = null;
+
+            try
+            {
+                newRacer = new Racer(id, racerName, racerAgeNumber, racerSalaryNumber);
+            }
+            catch (NameNotValidNameIsEmptyException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (NameNotValidFirstLetterProblemException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (AgeIsZeroException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (AgeAboveMaximumAgeException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (AgeUnderMinimumAgeException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (SalaryZeroException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (NegativeSalaryException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (LowSalaryException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (HighSalaryException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+
+            try
+            {
+                teamService.addReacerToTeam(teamName, newRacer);
+            }
+            catch (TeamException e)
+            {
+                throw new ControllerException(e.Message);
+            }
+            catch (F1Exception e)
+            {
+                throw new ControllerException(e.Message);
+            }
         }
 
         /// <summary>
