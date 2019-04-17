@@ -15,16 +15,15 @@ namespace Forma1.repository
         /// <exception cref="TeamException">Két úgyan olyan versenyző nem lehet</exception>
         public void addRacer(Racer r)
         {
-            foreach (Racer racer in racers)
+            if (!racers.Contains(r))
             {
-                if (racer.getName() == r.getName())
-                {
-                    racers.Add(r);
-                }
+                racers.Add(r);
+            }
+            else
+            {
                 throw new TeamException("Két úgyan olyan versenyző nem lehet");
             }
         }
-
         /// <summary>
         /// Törli a versenyzőt a csapatból
         /// </summary>
