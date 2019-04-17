@@ -46,7 +46,14 @@ namespace Forma1
             string racerAge = textBoxRacerAge.Text;
             string racerSalary = textBoxRacerSalary.Text;
 
-            controller.addRacerToTeam(teamName, racerName, racerAge, racerSalary);
+            try
+            {
+                controller.addRacerToTeam(teamName, racerName, racerAge, racerSalary);
+            }
+            catch (ControllerException ce)
+            {
+                errorProviderAddRacer.SetError(buttonAddRacer, ce.Message);
+            }
 
             listBoxRacer.DataSource = null;
             listBoxRacer.DataSource = controller.getTeamRacersName(teamName);
@@ -74,6 +81,7 @@ namespace Forma1
             }
             catch (ControllerException ce)
             {
+                errorProviderUpdateRacer.SetError(buttonUpdateRacer, ce.Message);
             }
         }
 
