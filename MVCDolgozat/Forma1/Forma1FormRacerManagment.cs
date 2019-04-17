@@ -23,7 +23,7 @@ namespace Forma1
         /// <param name="e"></param>
         private void listBoxRacer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBoxRacer.SelectedIndex < 0 && listBoxTeam.SelectedIndex < 0)
+            if (listBoxRacer.SelectedIndex < 0 || listBoxTeam.SelectedIndex < 0)
             {
                 return;
             }
@@ -109,23 +109,22 @@ namespace Forma1
             try
             {
                 controller.deleteRacerInTeam(teamName, racerName, racerAge);
-                listBoxRacer.DataSource = null;                
+                listBoxRacer.DataSource = null;
                 textBoxRacerName.Text = string.Empty;
                 textBoxRacerAge.Text = string.Empty;
                 textBoxRacerSalary.Text = string.Empty;
-                List<string> racerNames= controller.getTeamRacersName(teamName);
+                List<string> racerNames = controller.getTeamRacersName(teamName);
                 if (racerNames.Count > 0)
                 {
                     listBoxRacer.DataSource = racerNames;
                     listBoxRacer.SelectedIndex = 0;
                 }
-
             }
             catch (ControllerException ce)
             {
                 errorProviderUpdateRacer.SetError(buttonDeleteRacer, ce.Message);
             }
-        }       
+        }
 
         private void buttonMoveToTeam_Click(object sender, EventArgs e)
         {
@@ -145,7 +144,7 @@ namespace Forma1
                 listBoxRacer.DataSource = null;
                 listBoxRacer.DataSource = controller.getTeamRacersName(fromTeamName);
             }
-            catch(ControllerException ce)
+            catch (ControllerException ce)
             {
                 errorProviderMoveToTeam.SetError(buttonMoveToTeam, ce.Message);
             }
