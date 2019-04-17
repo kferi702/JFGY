@@ -375,6 +375,7 @@
             this.Controls.Add(this.labelTeam);
             this.Controls.Add(this.listBoxTeam);
             this.Name = "Form1Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Forma 1.";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
