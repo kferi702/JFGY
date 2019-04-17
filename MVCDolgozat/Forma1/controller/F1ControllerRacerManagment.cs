@@ -278,7 +278,22 @@ namespace Forma1.controller
         /// <returns></returns>
         public List<string> getTeamRacersName(string teamName)
         {
-            return null;
+            List<Racer> racers = null;
+            List<string> racerNames = new List<string>();
+
+            bool existingTeam = teamService.existTeamName(teamName);
+
+            if (existingTeam)
+            {
+                racers = teamService.getRacerFromTheTeam(teamName);
+
+                foreach (Racer r in racers)
+                {
+                    racerNames.Add(r.getName());
+                }
+            }
+
+            return racerNames;
         }
 
         /// <summary>
